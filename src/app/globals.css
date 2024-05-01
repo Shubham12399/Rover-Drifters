@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,8 +14,8 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
+} */
+/* 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +30,31 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+@font-face {
+  font-family: "gte-regular";
+  src: url("/fonts/GTEestiProDisplay-Regular.ttf");
+  font-display: swap;
 }
+
+* {
+  font-family: gte-regular;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* .GTE_light {
+  font-family: geist-light !important;
+}
+.GTE_medium {
+  font-family: geist-medium !important;
+}
+.GTE_bold {
+  font-family: geist-bold !important;
+}
+.GTE_regular {
+  font-family: geist-regular !important;
+} */
