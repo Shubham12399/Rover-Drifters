@@ -5,9 +5,7 @@ const BASE_URL =
   process.env.NODE_ENV == "development"
     ? "http://127.0.0.1:4000/api/v1"
     : "https://api-roverdrifters.onrender.com/api/v1";
-    : "https://api-roverdrifters.onrender.com/";
-
-    console.log(BASE_URL)
+// console.log(BASE_URL);
 const tourApi = {
   GET_ALL_TOURS: BASE_URL + "/tours",
   GET_TOUR_BY_ID: BASE_URL + "/tours",
