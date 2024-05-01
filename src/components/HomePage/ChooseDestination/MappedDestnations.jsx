@@ -34,8 +34,7 @@ const Mappedcities = () => {
             <div
               className="min-w-[120px] w-[130px] h-[140px] sm:min-w-[160px] sm:w-[160px] sm:h-[200px] md:min-w-[230px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative "
               key={i}
-              //   onClick={() => navigate("/city/city1")}
-            >
+            > 
               <div className="w-full h-full bg-gray-100"></div>
             </div>
           ))}
