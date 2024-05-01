@@ -65,7 +65,7 @@ const BottomNav = () => {
             src={HotelsIcon}
             width={20}
             height={20}
-            className="w-[20px] my-1 group-hover:text-[#ff612c]"
+            className="w-[16px] my-1 group-hover:text-[#ff612c]"
             alt="Hotels_icons"
           ></Image>
           <span className="text-xs">Hotels</span>{" "}
