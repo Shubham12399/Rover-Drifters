@@ -10,7 +10,7 @@ import { countryApi } from "@/services/apis";
 
 const Mappedcities = () => {
   const { data: cities, isLoading } = useQuery({
-    queryKey: ["destinationOf"],
+    queryKey: ["destinationOfCity"],
     queryFn: async () => {
       const res = await apiconnector(
         "GET",
