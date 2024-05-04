@@ -17,10 +17,10 @@ const Mappedcities = () => {
   const destination = findDestinationIdByName(allDestinations, countryName);
   console.log(allDestinations);
   useEffect(() => {
-    if (!countryName && allDestinations) {
+    if (!countryName && allDestinations[0]?.name) {
       if ("URLSearchParams" in window) {
         var searchParams = new URLSearchParams(window.location.search);
-        searchParams.set("country", allDestinations[0]?.name);
+        searchParams.set("country", allDestinations[0].name);
         window.location.search = searchParams.toString();
       }
     }
