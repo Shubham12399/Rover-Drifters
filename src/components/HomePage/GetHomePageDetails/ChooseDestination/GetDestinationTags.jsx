@@ -26,10 +26,10 @@ const GetDestinationTags = () => {
   const searchParams = useSearchParams();
   const countryName = searchParams.get('country');
   const selectedId = findDestinationIdByName(destinationsApi , countryName);
-  if (typeof window !== "undefined") {
-    // Client-side-only code
-  var url = new URL(window.location.href);
-  }
+  // if (typeof window !== "undefined") {
+  // var url = new URL(window.location.href)
+  //   // Client-side-only code
+  // }
   useEffect(() => {
     if (destinationsApi) {
       dispatch(setDestinations(destinationsApi));
@@ -48,7 +48,7 @@ const GetDestinationTags = () => {
                 // }}
                 // href={{ pathname: "/", query: { country: destination.name } }}
                 scroll={false}
-                // shallow={true}
+                shallow={true}
                 className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${destination._id == selectedId?._id && "text-white bg-[#ff621c] "}`}
                 key={index}
               >

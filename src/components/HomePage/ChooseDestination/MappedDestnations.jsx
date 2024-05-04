@@ -12,11 +12,20 @@ import { useSelector } from "react-redux";
 import findDestinationIdByName from "@/utils/findDestinationIdByName";
 const Mappedcities = () => {
   const searchParams = useSearchParams();
-  const countryName = searchParams.get('country');
-  const allDestinations = useSelector(store => store.allDestinations);
+  const countryName = searchParams.get("country");
+  const allDestinations = useSelector((store) => store.allDestinations);
   const destination = findDestinationIdByName(allDestinations, countryName);
-
-  // const countryId = 
+  console.log(allDestinations);
+  useEffect(() => {
+    if (!countryName && allDestinations) {
+      if ("URLSearchParams" in window) {
+        var searchParams = new URLSearchParams(window.location.search);
+        searchParams.set("country", allDestinations[0].name);
+        window.location.search = searchParams.toString();
+      }
+    }
+  } , [countryName ,allDestinations ]);
+  // const countryId =
   const { data: cities, isLoading } = useQuery({
     queryKey: ["destinationOfCity" + destination?._id],
     queryFn: async () => {
@@ -29,13 +38,13 @@ const Mappedcities = () => {
     },
     staleTime: Infinity,
   });
-//   if (paramsObj.current?.categoryId) {
-//     (async () => {
-//         const response = await categoryPageDetails(
-//             paramsObj.current.categoryId
-//         );
-//     })();
-// }
+  //   if (paramsObj.current?.categoryId) {
+  //     (async () => {
+  //         const response = await categoryPageDetails(
+  //             paramsObj.current.categoryId
+  //         );
+  //     })();
+  // }
 
   return (
     <>
