@@ -48,7 +48,7 @@ const GetDestinationTags = () => {
                 // }}
                 // href={{ pathname: "/", query: { country: destination.name } }}
                 scroll={false}
-                shallow={true}
+                // shallow={true}
                 className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${destination._id == selectedId?._id && "text-white bg-[#ff621c] "}`}
                 key={index}
               >
