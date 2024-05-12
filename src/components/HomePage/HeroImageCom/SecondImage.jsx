@@ -4,7 +4,8 @@ const Icon1 = "/images/ezgif.com-gif-to-mp4-converter.mp4";
 
 const SecondImage = () => {
   return (
-    <div className="col-span-4 -ml-2 -mb-7 sm:-mb-10 md:-mb-16 ">
+    // <div className="col-span-5 -ml-2 sm:-mb-10 md:-mb-16 ">
+    <div className="col-span-4 sm:-mb-10 md:-mb-16 ">
       <video
       // src={Icon1}
       // alt=""

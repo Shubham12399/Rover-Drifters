@@ -1,50 +1,54 @@
 "use client";
 
-import React, { Suspense, useCallback, useEffect, useMemo } from "react";
+import useFetch from "@/customehooks/useFetch";
+import { countryApi } from "@/services/apis";
+import { usePathname, useSearchParams } from "next/navigation";
+import React, { Suspense, useEffect } from "react";
+import { useSelector } from "react-redux";
 const ChooseDestinationItems = React.lazy(() =>
   import("./ChooseDestinationItems")
 );
-import { useQuery } from "@tanstack/react-query";
-import apiconnector from "@/services/apiconnector";
-import { countryApi } from "@/services/apis";
-import { useSearchParams } from "next/navigation";
-import { useSelector } from "react-redux";
-import findDestinationIdByName from "@/utils/findDestinationIdByName";
 const Mappedcities = () => {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const countryName = searchParams.get("country");
+  const destination = { _id: searchParams.get("con_uuid") };
   const allDestinations = useSelector((store) => store.allDestinations);
-  const destination = findDestinationIdByName(allDestinations, countryName);
-  console.log(allDestinations);
+
   useEffect(() => {
-    if (!countryName && allDestinations[0]?.name) {
+    if (
+      (!countryName &&
+        !destination?._id &&
+        allDestinations[0]?.name &&
+        allDestinations[0]?._id) ||
+      (allDestinations[0]?._id !== destination?._id &&
+        !countryName &&
+        !destination?._id &&
+        allDestinations[0]?.name &&
+        allDestinations[0]?._id)
+    ) {
+      console.log(allDestinations[0]?._id !== destination?._id);
+      console.log("hello");
       if ("URLSearchParams" in window) {
-        var searchParams = new URLSearchParams(window.location.search);
-        searchParams.set("country", allDestinations[0].name);
-        window.location.search = searchParams.toString();
+        const urlSearchParams = new URLSearchParams(searchParams);
+        urlSearchParams.set("country", allDestinations[0]?.name);
+        urlSearchParams.set("con_uuid", allDestinations[0]?._id);
+        // window.location.search = searchParams.toString();
+        history.replaceState(
+          null,
+          "",
+          `${pathname}?${urlSearchParams.toString()}`
+        );
       }
     }
-  } , [countryName ,allDestinations ]);
-  // const countryId =
-  const { data: cities, isLoading } = useQuery({
-    queryKey: ["destinationOfCity" + destination?._id],
-    queryFn: async () => {
-      const res = await apiconnector(
-        "GET",
-        // countryApi.GET_CITIES_BY_COUNTRY_ID + "/" + (process.env.NODE_ENV == "development") ? "65dd9e31286f2da11a97da2b" : "65e451b92b9e74dc1442089d"
-        countryApi.GET_CITIES_BY_COUNTRY_ID + "/" + destination?._id
-      );
-      return res?.data?.cities;
-    },
-    staleTime: Infinity,
+  }, [countryName, allDestinations, destination?._id, searchParams, pathname]);
+
+  const { cities, isLoading } = useFetch({
+    queryKey: "destinationOfCity" + destination?._id,
+    url: countryApi.GET_CITIES_BY_COUNTRY_ID + "/" + destination?._id,
+    varName: "cities",
+    resName: "cities",
   });
-  //   if (paramsObj.current?.categoryId) {
-  //     (async () => {
-  //         const response = await categoryPageDetails(
-  //             paramsObj.current.categoryId
-  //         );
-  //     })();
-  // }
 
   return (
     <>

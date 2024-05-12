@@ -4,7 +4,7 @@
 const BASE_URL =
   process.env.NODE_ENV == "development"
     ? 
-    //"http://127.0.0.1:4000/api/v1"
+    // "http://127.0.0.1:4000/api/v1"
     "https://api-roverdrifters.onrender.com/api/v1"
     : "https://api-roverdrifters.onrender.com/api/v1";
 // console.log(BASE_URL);
@@ -37,7 +37,7 @@ const typeApi = {
   CREATE_A_TYPE: BASE_URL + "/types",
   UPDATE_A_TYPE: BASE_URL + "/types",
   DELETE_A_TYPE: BASE_URL + "/types",
-  GET_Type_BY_ID: BASE_URL + "/types",
+  GET_TYPE_BY_ID: BASE_URL + "/types",
   GET_ALL_TYPE: BASE_URL + "/types",
   GET_TYPES_COUNT: BASE_URL + "/types/typescount",
 };

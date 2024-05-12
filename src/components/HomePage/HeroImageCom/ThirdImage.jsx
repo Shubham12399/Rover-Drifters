@@ -5,7 +5,7 @@ const Icon3 = "/images/sun-safari.png";
 
 const ThirdImage = () => {
     return (
-      <div className="col-span-4">
+      <div className="col-span-4 relative z-[1000]">
       <Image
         src={Icon3}
         alt="sun_image"

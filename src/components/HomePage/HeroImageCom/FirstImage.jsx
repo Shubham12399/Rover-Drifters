@@ -4,7 +4,8 @@ const Icon2 = "/images/ezgif.com-gif-to-mp4-converter 2.mp4";
 
 export const FirstImage = () => {
   return (
-         <div className="col-span-5 -ml-3">
+        //  <div className="col-span-4 -ml-3">
+         <div className="col-span-4">
         <video
           // src={Icon2}
           // alt=""

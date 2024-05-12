@@ -17,6 +17,9 @@ const ChooseDestination = React.lazy(() =>
 const CarouselComp = React.lazy(() =>
   import("@/components/Carousel/CarouselComp")
 );
+const TypesToursSec = React.lazy(() =>
+  import("@/components/HomePage/TypesTour/TypesToursSec")
+);
 
 export default function Home() {
   // const [state, setState] = useState();
@@ -27,14 +30,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between bg-white">
       <div className="w-full pb-14">
         {/* ------------------------------Header section ----------------------------------------------------- */}
-
         {/* Carousel  */}
         <div className="w-full">
           <Suspense fallback="">
             <CarouselComp></CarouselComp>
           </Suspense>
         </div>
-
         {/*action center*/}
         <div>
           {/* Heading Title Show on Desktop */}
@@ -56,15 +57,13 @@ export default function Home() {
             </Suspense>
           </div>
         </div>
-
-        {/* Mutli categories 
-        <Suspense fallback="">
-          <FetchHomePageData ></FetchHomePageData>
-        </Suspense> */}
-
+     
         {/* All Sections  */}
         <Suspense>
           <ChooseDestination></ChooseDestination>
+        </Suspense>
+        <Suspense fallback="">
+          <TypesToursSec></TypesToursSec>
         </Suspense>
       </div>
     </main>

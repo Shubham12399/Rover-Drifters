@@ -9,7 +9,7 @@ const ThirdImage = React.lazy(() => import("./ThirdImage"));
 // );
 const HomeHeroImages = () => {
   return (
-    <div className="relative grid grid-cols-[repeat(13,1fr)] -mb-2 before:bg-white before:h-[17px] before:absolute before:-bottom-[0.5rem] before:right-0 before:z-[999] before:blur-sm before:w-full">
+    <div className="relative grid grid-cols-[repeat(12,1fr)] -mb-3 before:bg-white before:h-[17px] before:absolute before:-bottom-[2px] before:right-0 before:z-[999] before:blur-sm before:w-full">
       <Suspense fallback="">
         <FirstImage></FirstImage>
       </Suspense>
