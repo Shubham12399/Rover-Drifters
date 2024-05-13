@@ -27,8 +27,8 @@ const GetDestinationTags = () => {
 
   const searchParams = useSearchParams();
   const countryName = searchParams.get("country");
-  const selectedId = findDestinationIdByName(destinationsApi, countryName);
   const params = new URLSearchParams(searchParams);
+  const selectedId = findDestinationIdByName(destinationsApi, countryName);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -48,7 +48,6 @@ const GetDestinationTags = () => {
                 onClick={() => {
                   params.set("country", destination.name);
                   params.set("con_uuid", destination._id);
-                  // console.log(params.get("country"));
                   history.replaceState(
                     null,
                     "",

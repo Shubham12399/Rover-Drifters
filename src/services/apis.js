@@ -39,6 +39,7 @@ const typeApi = {
   DELETE_A_TYPE: BASE_URL + "/types",
   GET_TYPE_BY_ID: BASE_URL + "/types",
   GET_ALL_TYPE: BASE_URL + "/types",
+  GET_ALL_POPULATED_TYPE:BASE_URL + "/types/populated",
   GET_TYPES_COUNT: BASE_URL + "/types/typescount",
 };
 

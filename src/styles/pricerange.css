@@ -1,0 +1,19 @@
+/* Custome Price Range Slider Css code  */
+
+.range-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ff612c;
+    cursor: pointer;
+  }
+  
+.range-slider__range,.range-slider__thumb{
+    /* CSS for range */
+    background-color: #ff612c !important;
+  }
+  .range-slider__thumb{
+    width: 15px !important;
+    height: 15px !important;
+  }

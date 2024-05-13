@@ -10,7 +10,7 @@ const TourCard = ({price,tour_name,destination,description,currency ,images}) =>
       <div className="w-full">
         <img
           loading="lazy"
-          src={images[0]}
+          src={images && images[0]}
           alt="tour Img"
           className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg drop-shadow-sm"
         />

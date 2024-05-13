@@ -45,7 +45,10 @@ body {
 }
 
 
-
+.hide-scrollbar::-webkit-scrollbar{
+  appearance: none;
+  display: none;
+}
 /* .GTE_light {
   font-family: geist-light !important;
 }

@@ -20,7 +20,7 @@ const useFetch = ({
         },
     staleTime: staleTime,
   });
-  return { [varName]: result.data, ...result };
+  return { [varName]: result.data, ...result  };
 };
 
 export default useFetch;

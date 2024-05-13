@@ -27,8 +27,6 @@ const Mappedcities = () => {
         allDestinations[0]?.name &&
         allDestinations[0]?._id)
     ) {
-      console.log(allDestinations[0]?._id !== destination?._id);
-      console.log("hello");
       if ("URLSearchParams" in window) {
         const urlSearchParams = new URLSearchParams(searchParams);
         urlSearchParams.set("country", allDestinations[0]?.name);
