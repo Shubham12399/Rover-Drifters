@@ -1,10 +1,12 @@
+import "@/styles/tour.css"
 const PostsSkl = () => {
     return (
-      <div className='flex gap-x-2 my-4 px-4 overflow-hidden'>
-          <div className='min-w-[120px] h-[140px] md:min-w-[210px] md:h-[230px] rounded-md bg-[var(--sklClr)]'></div>
-          <div className='min-w-[120px] h-[140px] md:min-w-[210px] md:h-[230px] rounded-md bg-[var(--sklClr)]'></div>
-          <div className='min-w-[120px] h-[140px] md:min-w-[210px] md:h-[230px] rounded-md bg-[var(--sklClr)]'></div>
-          <div className='min-w-[120px] h-[140px] md:min-w-[210px] md:h-[230px] rounded-md bg-[var(--sklClr)]'></div>
+      <div className='flex flex-wrap md:flex-nowrap gap-x-3 gap-y-3 mb-4 overflow-hidden'>
+          <div className='min-w-[150px] h-[180px] md:min-w-[180px] md:h-[190px] rounded-md bg-[var(--sklClr)]'></div>
+          <div className='min-w-[150px] h-[180px] md:min-w-[180px] md:h-[190px] rounded-md bg-[var(--sklClr)]'></div>
+          <div className='min-w-[150px] h-[180px] md:min-w-[180px] md:h-[190px] rounded-md bg-[var(--sklClr)]'></div>
+          <div className='min-w-[150px] h-[180px] md:min-w-[180px] md:h-[190px] rounded-md bg-[var(--sklClr)]'></div>
+          <div className='min-w-[150px] h-[180px] md:min-w-[180px] md:h-[190px] rounded-md bg-[var(--sklClr)]'></div>
       </div>
     )
   }

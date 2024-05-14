@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiconnector = async (method, url, bodyData, headers, params) => {
-  console.log(url,method);
+  console.log(url,method); 
     const responce = await axios({
         // Endpoint to send files
         url: url,

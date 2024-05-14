@@ -4,7 +4,6 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 const TourCard = ({price,tour_name,destination,description,currency ,images}) => {
-    console.log(images);
   return (
     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
       <div className="w-full">

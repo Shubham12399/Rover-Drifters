@@ -1,33 +1,33 @@
-import Modal from "../Modal";
+"use client";
+
+import React, { Suspense, useCallback, useState } from "react";
+const Modal = React.lazy(()=>import("../Modal"));
 // import NormalFilter from "../../data/NormalFilter";
 
-const FilterModal = ({
-  isFilterModal,
-  setIsFilterModal,
-  setFilterValue,
-  setLoading,
-  filterValue,
-}) => {
-  const handleFilter = (e) => {
-    setFilterValue((prev) => ({
+const FilterModal = ({ handleCloseModal}) => {
+   // filter configurations
+   const [filterValue, setFilterValue] = useState({
+     checkbox_0: true,
+     name: "No Filter",
+   });
+
+  const handleFilter = useCallback((e) => {
+    setFilterValue({
       [e.target.id]: e.target.checked,
       name: e.target.value,
-    }));
-    setIsFilterModal(false);
-    setLoading(true);
-    setTimeout(() => setLoading(false), 700);
-  };
+  });
+  },[]);
+
   return (
-    <>
+    <Suspense fallback="">
       {/* Modal section  */}
-      {isFilterModal && (
         <Modal
           title={
             <div className="flex items-center gap-x-2 GTE_light">
               Filter Options
             </div>
           }
-          setModal={setIsFilterModal}
+          setModal={() => handleCloseModal("filter")}
         >
           <div className="mx-auto select-none">
             <div className="flex flex-col w-full flex-wrap px-1 gap-y-1 my-2">
@@ -61,8 +61,7 @@ const FilterModal = ({
             </div>
           </div>
         </Modal>
-      )}
-    </>
+    </Suspense>
   );
 };
 

@@ -9,7 +9,7 @@ const Modal = ({ title,setModal, children, className }) => {
   const bottomModal = () => {
     setModalBottom(false);
     setTimeout(() => {
-      setModal(false);
+      setModal();
     }, 300);
   };
   return (

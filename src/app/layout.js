@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
       </Script>
       <body
       //  className={inter.className}
+      suppressHydrationWarning={true}
       >
         <Suspense fallback="">
           <Navbar></Navbar>

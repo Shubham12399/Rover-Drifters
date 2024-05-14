@@ -8,18 +8,21 @@ const useFetch = ({
   method = "GET",
   staleTime = Infinity,
   varName = "data",
-  resName = "data"
+  resName = "data",
+  defaultRes = false
 }) => {
+
   const result = useQuery({
-    queryKey: [queryKey],
+    queryKey: queryKey,
     queryFn: queryFn
       ? queryFn
       : async () => {
           const res = await apiconnector(method, url);
-          return res?.data[resName];
+          return  (!defaultRes ? res?.data[resName] : res?.data);
         },
     staleTime: staleTime,
   });
+  
   return { [varName]: result.data, ...result  };
 };
 
