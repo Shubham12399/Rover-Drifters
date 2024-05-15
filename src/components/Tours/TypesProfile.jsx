@@ -42,6 +42,7 @@ const TypesProfile = () => {
       !typeName &&
       !countryId
     ) {
+      // console.log(countryData);
       const urlSearchParams = new URLSearchParams(searchParams);
       urlSearchParams.set("type", typesData[0]?.name);
       urlSearchParams.set("type_id", typesData[0]?._id);
