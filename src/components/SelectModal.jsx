@@ -10,7 +10,7 @@ import { IoEarth } from "react-icons/io5";
 // const { typeApi } = dynamic(import("@/services/apis"),{ssr:false});
 
 import dynamic from "next/dynamic";
-const GetModalMappedData = React.lazy(()=>import("./GetModalMappedData"));
+import GetModalMappedData from "./GetModalMappedData";
 
 const Modal = dynamic(() => import("./Modal"));
 
@@ -66,12 +66,13 @@ const SelectModal = ({
   //   retriveDestinationAndType();
   // }, [retriveDestinationAndType]);
 
-  const handleSelectValue = (value) => {
+  const handleSelectValue = useCallback((value) => {
     setSelectValue(value);
     setTimeout(() => {
       setIsSelectModal(false);
     }, 300);
-  };
+  },[setSelectValue , setIsSelectModal]);
+
   useEffect(() => {
     if (isSelectModal) {
       retriveDestinationAndType();

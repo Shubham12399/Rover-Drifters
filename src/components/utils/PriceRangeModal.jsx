@@ -3,7 +3,7 @@ import "@/styles/pricerange.css";
 import "react-range-slider-input/dist/style.css";
 import { usePathname, useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback, useState } from "react";
-const { GoCheck } = React.lazy(() => import("react-icons/go"));
+import { GoCheck } from "react-icons/go";
 const RangeSlider = React.lazy(() => import("react-range-slider-input"));
 const Modal = React.lazy(() => import("../Modal"));
 const ActionButton = React.lazy(() => import("./ActionButton"));
@@ -24,10 +24,12 @@ const PriceRangeModal = ({ handleCloseModal }) => {
     params.set("min", priceRange[0]);
     params.set("max", priceRange[1]);
     // delete modal
-    params.delete("modalType");
+    // params.delete("modalType");
     history.replaceState(null, "", `${pathname}?${params.toString()}`);
+    handleCloseModal();
     console.log(priceRange);
-  }, [searchParams, pathname, priceRange]);
+
+  }, [searchParams, pathname, priceRange,handleCloseModal]);
 
   // useEffect(() => {
   //   setPriceRange([min, max]);

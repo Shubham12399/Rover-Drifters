@@ -27,7 +27,7 @@ const FilterModal = ({ handleCloseModal}) => {
               Filter Options
             </div>
           }
-          setModal={() => handleCloseModal("filter")}
+          setModal={() => handleCloseModal()}
         >
           <div className="mx-auto select-none">
             <div className="flex flex-col w-full flex-wrap px-1 gap-y-1 my-2">

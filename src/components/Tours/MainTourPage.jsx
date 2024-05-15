@@ -1,13 +1,13 @@
 "use client";
 
-import React, { Suspense, useCallback, useEffect } from "react";
+import React, { Suspense, useCallback, useEffect, useState } from "react";
 import { FaPlane } from "react-icons/fa";
 import { GoChevronRight } from "react-icons/go";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-const FilterModal = dynamic(() => import("../utils/PriceRangeModal"));
-const PriceRangeModal = dynamic(() => import("../utils/FilterModal"));
+import PriceRangeModal from "../utils/PriceRangeModal";
+import FilterModal from "../utils/FilterModal";
 const TypesProfile = React.lazy(() => import("./TypesProfile"));
 const MainHeading = React.lazy(() => import("./MainHeading"));
 const TourBanner = React.lazy(() => import("./TourBanner"));
@@ -16,12 +16,12 @@ const TypeTours = React.lazy(() => import("./TypeTours"));
 const MainTours = () => {
   // // tours is data of all tours
   const searchParams = useSearchParams();
-  const modalType = searchParams.get("modalType");
+  // const modalType = searchParams.get("modalType");
   const minPrice = searchParams.get("min");
   const maxPrice = searchParams.get("max");
   const filterValue = searchParams.get("filterValue");
   const pathname = usePathname();
-
+  const [isModal, setIsModal] = useState("");
   useEffect(() => {
     if (!minPrice && !maxPrice && !filterValue) {
       const params = new URLSearchParams(searchParams);
@@ -29,27 +29,37 @@ const MainTours = () => {
       params.set("max", 800);
       params.set("filterValue", "no filter");
       // params.
-        history.replaceState(null, "", `${pathname}?${params.toString()}`);
+      history.replaceState(null, "", `${pathname}?${params.toString()}`);
     }
   }, [minPrice, maxPrice, pathname, searchParams, filterValue]);
 
-  const handleCloseModal = useCallback(() => {
-    const params = new URLSearchParams(searchParams);
-    params.delete("modalType");
-    // params.
-    history.replaceState(null, "", `${pathname}?${params.toString()}`);
-  }, [searchParams, pathname]);
+  // const handleCloseModal = useCallback(() => {
+  //   const params = new URLSearchParams(searchParams);
+  //   params.delete("modalType");
+  //   // params.
+  //   history.replaceState(null, "", `${pathname}?${params.toString()}`);
+  // }, [searchParams, pathname]);
 
-  const handleOpenModel = useCallback(
-    (type) => {
-      const params = new URLSearchParams(searchParams);
-      params.set("modalType", type);
-      // params.
-      history.replaceState(null, "", `${pathname}?${params.toString()}`);
-    },
-    [searchParams, pathname]
-  );
+  // const handleOpenModel = useCallback(
+  //   (type) => {
+  //     const params = new URLSearchParams(searchParams);
+  //     if(modalType){ params.delete("modalType")}
+  //     else{ params.set("modalType", type)};
+  //     // params.
+  //     history.replaceState(null, "", `${pathname}?${params.toString()}`);
+  //   },
+  //   [searchParams, pathname,modalType]
+  // ,[]);
 
+  // console.log(modalType)
+
+  const handleCloseModal = () => {
+    setIsModal("");
+  };
+  const handleOpenModel = (type) => {
+    setIsModal(type);
+  };
+  console.log(isModal);
   return (
     <div className="pb-8">
       <Suspense fallback="">
@@ -152,12 +162,12 @@ const MainTours = () => {
       </div>
 
       {/* filter Modal */}
-      {modalType && modalType === "filter" && (
-        <FilterModal handleCloseModal={handleCloseModal} />
+      {isModal == "price-range" && (
+      <PriceRangeModal handleCloseModal={handleCloseModal} />
       )}
       {/*---------------------------------- Open Service Modal ---------------------------- */}
-      {modalType && modalType === "price-range" && (
-        <PriceRangeModal handleCloseModal={handleCloseModal} />
+      {isModal == "filter" && (
+        <FilterModal handleCloseModal={handleCloseModal} />
       )}
     </div>
   );
