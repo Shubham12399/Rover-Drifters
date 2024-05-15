@@ -3,7 +3,7 @@
 import React, { Suspense, useCallback, useEffect, useState } from "react";
 import { FaPlane } from "react-icons/fa";
 import { GoChevronRight } from "react-icons/go";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import PriceRangeModal from "../utils/PriceRangeModal";
@@ -22,12 +22,13 @@ const MainTours = () => {
   const filterValue = searchParams.get("filterValue");
   const pathname = usePathname();
   const [isModal, setIsModal] = useState("");
+
   useEffect(() => {
     if (!minPrice && !maxPrice && !filterValue) {
       const params = new URLSearchParams(searchParams);
       params.set("min", 300);
       params.set("max", 800);
-      params.set("filterValue", "no filter");
+      params.set("filterValue", "No Filter");
       // params.
       history.replaceState(null, "", `${pathname}?${params.toString()}`);
     }

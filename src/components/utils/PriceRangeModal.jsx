@@ -28,8 +28,7 @@ const PriceRangeModal = ({ handleCloseModal }) => {
     history.replaceState(null, "", `${pathname}?${params.toString()}`);
     handleCloseModal();
     console.log(priceRange);
-
-  }, [searchParams, pathname, priceRange,handleCloseModal]);
+  }, [searchParams, pathname, priceRange, handleCloseModal]);
 
   // useEffect(() => {
   //   setPriceRange([min, max]);
@@ -65,7 +64,9 @@ const PriceRangeModal = ({ handleCloseModal }) => {
               className={"w-fit py-1 px-2 rounded-md GTE_light"}
               onClick={handleSelectPriceRange}
             >
-              <Suspense fallback=""><GoCheck></GoCheck></Suspense>
+              <Suspense fallback="">
+                <GoCheck></GoCheck>
+              </Suspense>
               Select
             </ActionButton>
           </Suspense>

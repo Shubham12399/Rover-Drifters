@@ -13,6 +13,7 @@ const TypeTours = () => {
   const searchParams = useSearchParams();
   const pageQuery = searchParams.get("page");
   const selectedIdQuery = searchParams.get("type_id");
+  const selectedContryIdQuery = searchParams.get("con_id");
   const pathname = usePathname();
 
   const { typeIdTours, isLoading } = useFetch({
@@ -26,6 +27,7 @@ const TypeTours = () => {
     varName: "typeIdTours",
     defaultRes: true,
   });
+
   // Setting current page
   // useEffect(() => {
   //   if (typeIdTours?.currentPage) {
@@ -64,7 +66,7 @@ const TypeTours = () => {
       <div className="mt-3 flex justify-start md:justify-start gap-y-2 gap-x-6 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6 md:pr-3 flex-wrap w-fit md:w-full mx-auto ">
         {!isLoading &&
           typeIdTours?.tourType &&
-          typeIdTours?.tourType?.tours?.map((e) => (
+          typeIdTours?.tourType?.tours?.filter(e=>e.destination === selectedContryIdQuery)?.map((e) =>(
             <Suspense key={e._id} fallback="">
               <TourCard {...e}></TourCard>
             </Suspense>

@@ -1,22 +1,33 @@
 "use client";
 
+import normalFilter from "@/data/NormalFilter";
+import { usePathname, useSearchParams } from "next/navigation";
 import React, { Suspense, useCallback, useState } from "react";
 const Modal = React.lazy(()=>import("../Modal"));
 // import NormalFilter from "../../data/NormalFilter";
 
 const FilterModal = ({ handleCloseModal}) => {
    // filter configurations
-   const [filterValue, setFilterValue] = useState({
-     checkbox_0: true,
-     name: "No Filter",
-   });
-
-  const handleFilter = useCallback((e) => {
+   const [filterValue, setFilterValue] = useState(normalFilter);
+   const searchParams = useSearchParams();
+   const pathname = usePathname();
+   const filterValueQuery = searchParams.get("filterValue");
+  
+  const handleFilter = useCallback((e,item) => {
     setFilterValue({
       [e.target.id]: e.target.checked,
       name: e.target.value,
   });
-  },[]);
+  const urlSearchParams = new URLSearchParams(searchParams);
+  urlSearchParams.set("filterValue", item.name);
+  history.replaceState(
+    null,
+    "",
+    `${pathname}?${urlSearchParams.toString()}`
+  );
+  handleCloseModal();
+
+  },[searchParams,pathname,handleCloseModal]);
 
   return (
     <Suspense fallback="">
@@ -31,7 +42,7 @@ const FilterModal = ({ handleCloseModal}) => {
         >
           <div className="mx-auto select-none">
             <div className="flex flex-col w-full flex-wrap px-1 gap-y-1 my-2">
-              {[{name:"Most Popular"}].map((item, index) => {
+              {[{name:"Most Popular" },{name:"No Filter" }].map((item, index) => {
                 return (
                   <div
                     key={index}
@@ -43,10 +54,11 @@ const FilterModal = ({ handleCloseModal}) => {
                       id={"checkbox_" + index}
                       name="normalfilter"
                       value={item.name}
-                      onChange={handleFilter}
+                      onChange={(e)=>handleFilter(e,item)}
                       checked={
-                        Object?.entries(filterValue)[0][0] ==
-                        "checkbox_" + index
+                        // Object?.entries(filterValue)[0][0] ==
+                        // "checkbox_" + index
+                        `${filterValueQuery}` === `${item.name}`
                       }
                     />
                     <label
