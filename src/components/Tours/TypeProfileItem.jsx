@@ -1,14 +1,14 @@
 import React from "react";
 
-const TypeProfileItem = ({ item, onClick, itemId }) => {
+const TypeProfileItem = ({ item, onClick, itemId, size={w:"65px" , h:"65px"} , className="" }) => {
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer min-w-[70px] group"
+      className={className?className:" cursor-pointer min-w-[70px] group "}
     >
       <img
         src={item?.image}
-        className={`w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c]
+        className={`w-[${size.w}] h-[${size.h}] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c]
               ${item?._id == itemId && " !border-[#ff621c] "}
              `}
              loading="lazy"

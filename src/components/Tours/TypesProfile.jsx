@@ -115,7 +115,7 @@ const TypesProfile = () => {
             ></div>
           ))}
       </div>
-      <div className="md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
+      <div className="md:ml-0 flex justify-start md:justify-center gap-x-2 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
         {!isCountryLoading &&
           countryData?.map((country) => (
             <Suspense key={country._id}>
@@ -123,6 +123,8 @@ const TypesProfile = () => {
                 onClick={() => handleSelectItem({...country ,type:"countryItem"})}
                 item={country}
                 itemId={countryId}
+                className="cursor-pointer !min-w-[50px] group"
+                size={{w:"50px" , h:"50px"}}
               ></TypeProfileItem>
             </Suspense>
           ))}

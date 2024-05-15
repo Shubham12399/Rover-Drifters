@@ -60,7 +60,6 @@ const MainTours = () => {
   const handleOpenModel = (type) => {
     setIsModal(type);
   };
-  console.log(isModal);
   return (
     <div className="pb-8">
       <Suspense fallback="">
@@ -84,12 +83,11 @@ const MainTours = () => {
       </div>
 
       {/* Heading Area and Post  */}
-      <div className="p-4 max-w-maxWidthContent mx-auto md:pt-8 pb-0">
+      <div className="p-4 pt-0 max-w-maxWidthContent mx-auto md:pt-8 pb-0">
         {/* Tourse heading and view all btn */}
-        <div>
+        {/* <div>
           <h3 className="text-sm md:text-lg font-medium flex gap-x-2 items-center">
             <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
-            {/* {changedType?.name} */}
             Tours in Cities
           </h3>
           <Link
@@ -99,19 +97,19 @@ const MainTours = () => {
           >
             View All Tours
           </Link>
-        </div>
+        </div> */}
 
         {/* Result , sort by Option and All Tour Container */}
         <div>
           {/* Result , sort by Option Container */}
-          <div className="flex justify-between items-center pt-4 pb-2">
+          <div className="flex justify-between items-center pb-2 pl-2">
             {/* Result Container */}
             <span className="flex gap-x-2">
-              Result:{" "}
+              Result:
               {/* {loading ? (
                 <div className="w-[40px] bg-[var(--sklClr)] rounded-md inline-block"></div>
               ) : (
-                tours.length
+                // tours.length
               )} */}
             </span>
 
