@@ -17,16 +17,18 @@ const TypeTours = () => {
   const pathname = usePathname();
 
   const { typeIdTours, isLoading } = useFetch({
-    queryKey: ["typeIdTours" + selectedIdQuery + (pageQuery || 1)],
+    queryKey: ["typeIdTours" + selectedIdQuery + (pageQuery || 1) + selectedContryIdQuery],
     method: "GET",
     url:
       typeApi.GET_TYPE_BY_ID +
       "/" +
       selectedIdQuery +
-      `?page=${pageQuery || 1}&limit=10`,
+      `?countryId=${selectedContryIdQuery}&page=${pageQuery || 1}&limit=10`,
     varName: "typeIdTours",
     defaultRes: true,
   });
+
+  // const {typeIdAndCountryData}
 
   // Setting current page
   // useEffect(() => {
@@ -66,7 +68,7 @@ const TypeTours = () => {
       <div className="mt-3 flex justify-start md:justify-start gap-y-2 gap-x-6 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6 md:pr-3 flex-wrap w-fit md:w-full mx-auto ">
         {!isLoading &&
           typeIdTours?.tourType &&
-          typeIdTours?.tourType?.tours?.filter(e=>e.destination === selectedContryIdQuery)?.map((e) =>(
+          typeIdTours?.tourType?.tours?.map((e) =>(
             <Suspense key={e._id} fallback="">
               <TourCard {...e}></TourCard>
             </Suspense>

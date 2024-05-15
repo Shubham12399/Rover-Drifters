@@ -4,7 +4,6 @@ import React, { Suspense, useCallback, useEffect, useState } from "react";
 import { FaPlane } from "react-icons/fa";
 import { GoChevronRight } from "react-icons/go";
 // import dynamic from "next/dynamic";
-import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import PriceRangeModal from "../utils/PriceRangeModal";
 import FilterModal from "../utils/FilterModal";
@@ -60,6 +59,7 @@ const MainTours = () => {
   const handleOpenModel = (type) => {
     setIsModal(type);
   };
+  
   return (
     <div className="pb-8">
       <Suspense fallback="">

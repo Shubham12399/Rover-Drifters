@@ -32,7 +32,6 @@ const TypesProfile = () => {
   });
   const dispatch = useDispatch();
 
-  // console.log(countryData)s
   // Heandling New Search Query (Adding Defult product query when url is empty)
   useEffect(() => {
     if (
@@ -41,12 +40,13 @@ const TypesProfile = () => {
       !typeId &&
       !typeName &&
       !countryId
+      && countryData[0]?._id
     ) {
       // console.log(countryData);
       const urlSearchParams = new URLSearchParams(searchParams);
       urlSearchParams.set("type", typesData[0]?.name);
       urlSearchParams.set("type_id", typesData[0]?._id);
-      urlSearchParams.set("con_id", countryData[0]?._id);
+        urlSearchParams.set("con_id", countryData[0]?._id);
       dispatch(setSelectedTypeInTourPage(typesData[0]));
       // window.location.search = searchParams.toString();
       history.replaceState(
