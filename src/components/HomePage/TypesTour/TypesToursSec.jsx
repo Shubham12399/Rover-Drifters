@@ -5,7 +5,7 @@ import TypeTour from "./TypeTour";
 const TypesToursSec = () => {
   const { typesTours, isLoading } = useFetch({
     queryKey: "typesTours",
-    url: typeApi.GET_ALL_POPULATED_TYPE,
+    url: typeApi.GET_ALL_TYPE,
     varName: "typesTours",
   });
   console.log(typesTours);
@@ -38,7 +38,6 @@ const TypesToursSec = () => {
             title={e.name}
             paragraph={e.paragraph}
             key={e._id}
-            tours={e.tours}
           ></TypeTour>
         );
       })}
