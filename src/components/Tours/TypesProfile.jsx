@@ -104,6 +104,7 @@ const TypesProfile = () => {
                 onClick={() => handleSelectItem({...type ,type:"typeItem"})}
                 item={type}
                 itemId={typeId}
+                size={{w:"65px" , h:"65px"}}
               ></TypeProfileItem>
             </Suspense>
           ))}

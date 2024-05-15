@@ -4,12 +4,14 @@ import useFetch from "@/customehooks/useFetch";
 import TourCard from "./TourCard";
 import { typeApi } from "@/services/apis";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import PostsSkl from "@/components/skelton/PostSkl";
 
 const TypeTour = ({ _id, title }) => {
   const searchParams = useSearchParams();
   const countryId = searchParams.get("con_uuid");
-  console.log(_id, countryId);
-  const { homeTypeData, data, isLoading } = useFetch({
+  const [isTours , setIsTours] = useState(true);
+  const { homeTypeData, isLoading } = useFetch({
     queryKey: ["homeTypesData" + _id + countryId],
     url: typeApi.GET_TYPE_BY_ID + "/" + _id + `?countryId=${countryId}`,
     method: "GET",
@@ -17,9 +19,17 @@ const TypeTour = ({ _id, title }) => {
     defaultRes: true,
   });
 
+  useEffect(() => {
+   if(homeTypeData?.tourType?.tours.length){
+    setIsTours(true);
+   }else{
+    setTimeout(()=>setIsTours(false) , 100);
+   }
+  },[homeTypeData]);
+
   return (
     <>
-      { homeTypeData?.tourType?.tours.length ? (
+      {isTours && (
         <div className="md:mt-12 max-w-[970px] mb-4 md:mb-0 mx-auto pl-3 md:px-6">
           <h1 className="text-lg md:text-2xl font-medium md:top-0 flex justify-between items-baseline pr-2">
             {title}
@@ -33,12 +43,15 @@ const TypeTour = ({ _id, title }) => {
             awaits!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar md:pb-6 pr-3">
-            {homeTypeData?.tourType?.tours?.map((e) => (
+            {!isLoading && homeTypeData?.tourType?.tours?.map((e) => (
               <TourCard {...e} key={e._id}></TourCard>
             ))}
           </div>
+          <div>
+            {isLoading && <PostsSkl></PostsSkl>}
+          </div>
         </div>
-      ) : null}
+      ) }
     </>
   );
 };
