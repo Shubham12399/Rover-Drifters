@@ -96,7 +96,7 @@ const TypesProfile = () => {
 
   return (
     <div className="sticky bg-white top-20">
-      <div className="md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
+      <div className="md:ml-0 flex justify-start md:justify-center gap-x-1 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
         {!isLoading &&
           typesData?.map((type) => (
             <Suspense key={type._id}>
@@ -104,7 +104,6 @@ const TypesProfile = () => {
                 onClick={() => handleSelectItem({...type ,type:"typeItem"})}
                 item={type}
                 itemId={typeId}
-                size={{w:"65px" , h:"65px"}}
               ></TypeProfileItem>
             </Suspense>
           ))}
@@ -117,7 +116,7 @@ const TypesProfile = () => {
             ></div>
           ))}
       </div>
-      <div className="md:ml-0 flex justify-start md:justify-center gap-x-2 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
+      <div className="md:ml-0 flex justify-start md:justify-center gap-x-1 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar pl-4 ">
         {!isCountryLoading &&
           countryData?.map((country) => (
             <Suspense key={country._id}>

@@ -3,18 +3,18 @@ import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
-const TourCard = ({price,tour_name,destination,description,currency ,images}) => {
+const TourCard = ({_id,price,tour_name,destination,description,currency ,images}) => {
   return (
-    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
+    <div className="min-w-[150px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lg">
       <div className="w-full">
         <img
           loading="lazy"
           src={images && images[0]}
           alt="tour Img"
-          className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg drop-shadow-sm"
+          className="w-full h-[110px] sm:h-[110px] object-cover drop-shadow-sm"
         />
       </div>
-      <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+      <div className="px-4 sm:px-4 my-2 mb-3 sm:my-4 ">
         <Tooltip content={tour_name}>
         <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
         {tour_name}
@@ -34,7 +34,7 @@ const TourCard = ({price,tour_name,destination,description,currency ,images}) =>
           </div>
         </div>
         <div className="flex !items-strech gap-1 mt-3">
-          <Link href="/tour/tour1">
+        <Link href={`/tour/${_id}`}>
             <Button
               size="sm"
               variant="outlined"
@@ -44,7 +44,7 @@ const TourCard = ({price,tour_name,destination,description,currency ,images}) =>
             </Button>
           </Link>
 
-          <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0">
+         <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0" >
             <MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart>
           </button>
         </div>

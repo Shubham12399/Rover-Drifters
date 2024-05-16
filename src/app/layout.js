@@ -11,7 +11,10 @@ const ReactQueryProvider = React.lazy(() =>
 );
 
 export const metadata = {
-  title: "Rover Drifters - Explore World",
+  title: {
+    default:"Rover Drifters - Explore World",
+    template:"%s | Rover Drifters"
+  },
   description: "The Next feeling of Tour & Travel.",
 };
 

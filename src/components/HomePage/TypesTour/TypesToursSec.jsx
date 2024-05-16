@@ -1,14 +1,17 @@
 import useFetch from "@/customehooks/useFetch";
-import React from "react";
+import React, { useEffect } from "react";
 import { typeApi } from "@/services/apis";
 import TypeTour from "./TypeTour";
 const TypesToursSec = () => {
   const { typesTours, isLoading } = useFetch({
-    queryKey: "typesTours",
+    queryKey: "typesToursss",
     url: typeApi.GET_ALL_TYPE,
     varName: "typesTours",
   });
   console.log(typesTours);
+  useEffect(() => {
+    console.log("render")
+  },[]);
   // price,tour_name,destination,description,currency,price
   // price: { sharing_price: 304, private_price: 398 },
   // _id: '65e71352829fbe61f6c203ee',
@@ -29,7 +32,7 @@ const TypesToursSec = () => {
   // __v: 0,
   // itenries: []
   return (
-    <div>
+    <div className="md:mt-16">
       {typesTours?.map((e) => {
         if (!e.tours.length) return;
         return (
