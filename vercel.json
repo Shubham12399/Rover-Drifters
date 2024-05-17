@@ -4,7 +4,7 @@
         "source": "/(.*)", "destination": "/"
     },
       {
-        "source": "/tour/:slug(.*)", "destination": "/tour"
+        "source": "/tour/(slug)(.*)", "destination": "/tour"
     }
     ]
   }
