@@ -1,16 +1,10 @@
 "use client";
 
 import React, { Suspense, useCallback, useEffect, useState } from "react";
-// import { useQuery } from "@tanstack/react-query";
-// import axios from "axios";
-// const apiconnector = dynamic(import("@/services/apiconnector"));
 import { IoEarth } from "react-icons/io5";
-// import Destinations from "@/data/Destinations";
-// import TourType from "@/data/TourType";
-// const { typeApi } = dynamic(import("@/services/apis"),{ssr:false});
-
 import dynamic from "next/dynamic";
 import GetModalMappedData from "./GetModalMappedData";
+import { useSelector } from "react-redux";
 
 const Modal = dynamic(() => import("./Modal"));
 
@@ -45,33 +39,38 @@ const SelectModal = ({
   //     return res; // Return the Pokémon data
   //   })();
   // }, []);
+  const allDestinations = useSelector((store) => store.allDestinations);
+  const allTypes = useSelector((store) => store.allTypes);
 
   const retriveDestinationAndType = useCallback(async () => {
     setMappedData([]);
     if (type == "tourType") {
       // console.log(TourType);
-      setMappedData([...(await import("@/data/TourType")).default]);
+      setMappedData([...allTypes]);
     }
     if (type == "tourDestination") {
       // console.log(Destinations);
-      setMappedData([...(await import("@/data/Destinations")).default]);
+      setMappedData([...allDestinations]);
     }
     return () => {
       //return void
       return;
     };
-  }, [type]);
+  }, [type, allDestinations, allTypes]);
 
   // useEffect(() => {
   //   retriveDestinationAndType();
   // }, [retriveDestinationAndType]);
 
-  const handleSelectValue = useCallback((value) => {
-    setSelectValue(value);
-    setTimeout(() => {
-      setIsSelectModal(false);
-    }, 300);
-  },[setSelectValue , setIsSelectModal]);
+  const handleSelectValue = useCallback(
+    (value) => {
+      setSelectValue(value);
+      setTimeout(() => {
+        setIsSelectModal(false);
+      }, 300);
+    },
+    [setSelectValue, setIsSelectModal]
+  );
 
   useEffect(() => {
     if (isSelectModal) {
@@ -99,7 +98,12 @@ const SelectModal = ({
           <div className="w-fit mx-auto">
             <div className="flex justify-start flex-wrap gap-y-1 my-2">
               <Suspense fallback="">
-              <GetModalMappedData mappedData={mappedData} handleSelectValue={handleSelectValue} selectValue={selectValue}></GetModalMappedData></Suspense>
+                <GetModalMappedData
+                  mappedData={mappedData}
+                  handleSelectValue={handleSelectValue}
+                  selectValue={selectValue}
+                ></GetModalMappedData>
+              </Suspense>
             </div>
           </div>
         </Modal>

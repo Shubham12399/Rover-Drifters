@@ -6,6 +6,8 @@ import { typeApi } from "@/services/apis";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import PostsSkl from "@/components/skelton/PostSkl";
+import { useDispatch } from "react-redux";
+import { setAllTypes } from "@/redux/slices/allTypes";
 
 const TypeTour = ({ _id, title }) => {
   const searchParams = useSearchParams();
@@ -17,7 +19,7 @@ const TypeTour = ({ _id, title }) => {
     varName: "homeTypeData",
     defaultRes: true,
   });
-
+ 
   return (
     <>
       {homeTypeData?.tourType?.tours.length !== 0 && (

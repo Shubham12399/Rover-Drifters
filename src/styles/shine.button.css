@@ -1,0 +1,54 @@
+:root {
+    --shine_btn-border: 1px solid rgba(255, 255, 255, 0.2);
+    --shine_btn-bg: transparent;
+    --shine_btn-shadow: 1px 1px 25px 10px rgba(255, 255, 255, 0.5);
+    --shine_btn-text-color: #f4f4f4;
+    --shine-degree: 120deg;
+    --shine-color: rgba(255, 255, 255, 0.2);
+    --shine-effect: linear-gradient(
+      var(--shine-degree),
+      transparent,
+      var(--shine-color),
+      transparent
+    );
+    --shine-transition: all 0.65s ease-in-out;
+  }
+  
+  .shine_btn {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .shine_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+    -webkit-animation: shine 3s ease-in-out infinite;
+    animation: shine 5s ease-in-out infinite;
+  }
+ 
+  @-webkit-keyframes shine {
+    0% {
+      left: -100%;
+      transition-property: left;
+    }
+    11.5044247788%, 100% {
+      left: 100%;
+      transition-property: left;
+    }
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100%;
+      transition-property: left;
+    }
+    11.5044247788%, 100% {
+      left: 100%;
+      transition-property: left;
+    }
+  }
+

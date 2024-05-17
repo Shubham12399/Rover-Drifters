@@ -11,12 +11,12 @@ const GetModalMappedData = ({mappedData,handleSelectValue,selectValue}) => {
                         handleSelectValue(mappedItem);
                       }}
                     >
-                      {/* <img
+                      <img
                         // src={mappedItem.image}
-                        src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_603/v1711187913/roverDrifters/yi3tyxq81uvlgya2jccr.png"
+                        src={mappedItem?.image}
                         alt=""
                         className="w-full object-cover h-[54px] md:h-[60px] rounded-lg select-none"
-                      /> */}
+                      />
                       <h3
                         className={`font-light text-xs mt-1 GTE_light ml-1  ${
                           JSON.stringify(selectValue) ==

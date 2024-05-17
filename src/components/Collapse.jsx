@@ -6,7 +6,7 @@ const CollapseComp = ({ className,title, children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <div className={`border cursor-pointer `}>
+    <div className={`cursor-pointer `}>
         <div className={`flex gap-x-2 py-3 justify-between items-center cursor-pointer hover:bg-[rgba(0,0,0,0.05)] ${className} `}  onClick={() => setIsCollapsed(!isCollapsed)}>
             <div className="w-fit">
             <h3 className="text-richblue-500 ">

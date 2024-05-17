@@ -1,7 +1,7 @@
 "use client";
 
 import useFetch from "@/customehooks/useFetch";
-import { setIsProfileLoading } from "@/redux/slices/tourPage/isProfileLoading";
+import { setIsProfileLoading } from "@/redux/slices/isProfileLoading";
 import { setSelectedTypeInTourPage } from "@/redux/slices/tourPage/selectedType";
 import { countryApi, typeApi } from "@/services/apis";
 import { usePathname, useSearchParams } from "next/navigation";

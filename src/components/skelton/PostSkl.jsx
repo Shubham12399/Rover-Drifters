@@ -1,4 +1,4 @@
-import "@/styles/tour.css"
+import "@/styles/skleton.css"
 const PostsSkl = () => {
     return (
       <div className='flex flex-wrap md:flex-nowrap gap-x-3 gap-y-3 mb-4 overflow-hidden'>

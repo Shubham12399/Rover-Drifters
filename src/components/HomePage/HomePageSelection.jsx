@@ -1,7 +1,8 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useCallback, useState } from "react";
 import { GoChevronRight } from "react-icons/go";
+import { useSelector } from "react-redux";
 const SelectModal = React.lazy(() => import("../SelectModal"));
 
 const HomePageSelection = () => {
@@ -9,10 +10,15 @@ const HomePageSelection = () => {
   const [tourType, setTourType] = useState({});
   const [selectionType, setSelectionType] = useState([]);
   const [isModal, setIsModal] = useState(false);
-  const handleSelectionType = (typeString, setStateFun, stateValue) => {
-    setSelectionType([typeString, setStateFun, stateValue]);
-    setIsModal(true);
-  };
+
+  const handleSelectionType = useCallback(
+    (typeString, setStateFun, stateValue) => {
+      setSelectionType([typeString, setStateFun, stateValue]);
+      setIsModal(true);
+    },
+    []
+  );
+
   // before:bg-white before:h-[17px] before:absolute before:top-0 before:right-0 before:z-[999] before:blur-sm
   return (
     <>

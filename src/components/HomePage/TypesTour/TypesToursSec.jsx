@@ -2,16 +2,22 @@ import useFetch from "@/customehooks/useFetch";
 import React, { useEffect } from "react";
 import { typeApi } from "@/services/apis";
 import TypeTour from "./TypeTour";
+import { useDispatch } from "react-redux";
+import { setAllTypes } from "@/redux/slices/allTypes";
 const TypesToursSec = () => {
   const { typesTours, isLoading } = useFetch({
     queryKey: "typesToursss",
     url: typeApi.GET_ALL_TYPE,
     varName: "typesTours",
   });
-  console.log(typesTours);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    console.log("render")
-  },[]);
+    if (typesTours) {
+      dispatch(setAllTypes(typesTours));
+    }
+  }, [dispatch, typesTours]);
+
   // price,tour_name,destination,description,currency,price
   // price: { sharing_price: 304, private_price: 398 },
   // _id: '65e71352829fbe61f6c203ee',

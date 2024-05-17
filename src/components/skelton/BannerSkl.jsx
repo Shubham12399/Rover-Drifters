@@ -1,4 +1,4 @@
-import React from 'react'
+import "@/styles/skleton.css"
 
 const BannerSkl = ({h ,w="100%"}) => {
   return (
