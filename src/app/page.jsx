@@ -22,10 +22,7 @@ const TypesToursSec = React.lazy(() =>
 );
 
 export default function Home() {
-  // const [state, setState] = useState();
-  // onCLS(console.log);
-  // onFID(console.log);
-  // onLCP(console.log);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-white">
       <div className="w-full pb-14">

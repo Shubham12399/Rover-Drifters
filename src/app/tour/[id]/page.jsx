@@ -19,7 +19,6 @@ import {
 
 export default function Page() {
   const params = useParams();
-
   // getting api data of indivisual tour by its id
   const { tourData, isLoading } = useFetch({
     queryKey: [`tour_${params?.id}`],
