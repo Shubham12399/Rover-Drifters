@@ -34,7 +34,7 @@ const TourCard = ({_id,price,tour_name,destination,description,currency ,images}
           </div>
         </div>
         <div className="flex !items-strech gap-1 mt-3">
-        <Link href={`/tour/${_id}`} legacyBehavior={true}>
+        <Link href={`/tour/${_id}`} passHref >
            <a> <Button
               size="sm"
               variant="outlined"
