@@ -13,9 +13,7 @@ import useFetch from "@/customehooks/useFetch";
 import { tourApi } from "@/services/apis";
 import "@/styles/shine.button.css";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
-import {
-  GoArrowLeft
-} from "react-icons/go";
+import { GoArrowLeft } from "react-icons/go";
 
 export default function Page() {
   const params = useParams();
@@ -81,7 +79,9 @@ export default function Page() {
             className="w-full h-full object-cover object-cover"
           />
         )}
-        {isLoading && <BannerSkl className="w-full h-[170px] md:h-[60vh]"></BannerSkl>}
+        {isLoading && (
+          <BannerSkl className="w-full h-[170px] md:h-[60vh]"></BannerSkl>
+        )}
         <div
           className="absolute top-2 left-2 text-xl w-fit cursor-pointer p-2  rounded-md GTE_light "
           onClick={() => window.history.back()}
@@ -150,7 +150,11 @@ export default function Page() {
         </CollapseComp>
       </div>
 
-      <BottomCtaButtons id={tourData?.tour?._id}></BottomCtaButtons>
+      <BottomCtaButtons
+        id={tourData?.tour?._id}
+        bookNowHref={`/booking/step-first/?tourId=${params?.id}`}
+        cartHandler={() => {}}
+      ></BottomCtaButtons>
     </div>
   );
 }

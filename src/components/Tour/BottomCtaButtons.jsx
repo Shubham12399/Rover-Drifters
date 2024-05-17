@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 
-const BottomCtaButtons = () => {
+const BottomCtaButtons = ({bookNowHref , cartHandler}) => {
   const [showBottomCtaBtn,setShowBottomCtaBtn] = useState(false);
 
   const windowScrollEvent = useCallback(function () {
@@ -29,13 +30,15 @@ const BottomCtaButtons = () => {
       }`}
     >
       <div className="flex gap-x-2 items-stretch max-w-maxContentTab mx-auto relative">
+        <Link href={bookNowHref} className="flex-grow ">
         <button
-          className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-base text-white bg-[#ff612c] hover:border-[#f77031] GTE_light shine_btn "
+          className="w-full ormal-case py-2 rounded-md px-2 text-xs sm:text-base text-white bg-[#ff612c] hover:border-[#f77031] GTE_light shine_btn "
           onClick={() => {}}
         >
           Book Now
         </button>
-        <button className="normal-case py-2 rounded-md w-fit px-5 text-xs sm:text-base text-[#ff621c]  border border-[#ff612c] GTE_light">
+        </Link>
+        <button className="normal-case py-2 rounded-md w-fit px-5 text-xs sm:text-base text-[#ff621c]  border border-[#ff612c] GTE_light" onClick={cartHandler}>
           Add To Cart
         </button>
       </div>

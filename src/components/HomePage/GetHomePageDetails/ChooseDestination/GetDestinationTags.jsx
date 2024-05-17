@@ -26,10 +26,10 @@ const GetDestinationTags = () => {
   });
 
   const searchParams = useSearchParams();
-  const countryName = searchParams.get("country");
   const params = new URLSearchParams(searchParams);
-  const selectedId = findDestinationIdByName(destinationsApi, countryName);
   const pathname = usePathname();
+  const countryName = searchParams.get("country");
+  const selectedId = findDestinationIdByName(destinationsApi, countryName);
 
   useEffect(() => {
     if (destinationsApi) {

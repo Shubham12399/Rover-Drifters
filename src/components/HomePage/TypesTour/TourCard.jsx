@@ -13,13 +13,13 @@ const TourCard = ({
   images,
 }) => {
   return (
-    <div className="min-w-[150px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lg">
+    <div className="min-w-[150px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
       <div className="w-full">
         <img
           loading="lazy"
           src={images && images[0]}
           alt="tour Img"
-          className="w-full h-[110px] sm:h-[110px] object-cover drop-shadow-sm"
+          className="w-full h-[110px] sm:h-[110px] object-cover rounded-md drop-shadow-sms"
         />
       </div>
       <div className="px-4 sm:px-4 my-2 mb-3 sm:my-4 ">

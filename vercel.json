@@ -1,11 +1,12 @@
 {
-    "rewrites":  [
-      {
-        "source": "/", "destination": "/"
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/"
     },
-      {
-        "source": "/tour/(slug)/page.js", "destination": "/tour"
+    {
+      "source": "/tour/(slug)/page.js",
+      "destination": "/tour"
     }
-    ]
-  }
-  
+  ]
+}
