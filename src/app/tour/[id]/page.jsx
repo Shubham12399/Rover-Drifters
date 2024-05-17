@@ -12,13 +12,15 @@ import TitleSkl from "@/components/skelton/TitleSkl";
 import useFetch from "@/customehooks/useFetch";
 import { tourApi } from "@/services/apis";
 import "@/styles/shine.button.css";
-import { useParams } from "next/navigation";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 import {
   GoArrowLeft
 } from "react-icons/go";
 
 export default function Page() {
   const params = useParams();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
   // getting api data of indivisual tour by its id
   const { tourData, isLoading } = useFetch({
     queryKey: [`tour_${params?.id}`],
