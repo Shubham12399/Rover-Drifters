@@ -20,7 +20,7 @@ const TourCard = ({
           src={images && images[0]}
           alt="tour Img"
           className="w-full h-[110px] sm:h-[110px] object-cover rounded-md drop-shadow-sms"
-        />
+        /> 
       </div>
       <div className="px-4 sm:px-4 my-2 mb-3 sm:my-4 ">
         <Tooltip content={tour_name}>
