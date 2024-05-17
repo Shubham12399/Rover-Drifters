@@ -15,7 +15,7 @@ const TourCard = ({
   return (
     <div className="min-w-[150px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
       <div className="w-full">
-        <img
+        <img  
           loading="lazy"
           src={images && images[0]}
           alt="tour Img"
