@@ -6,21 +6,18 @@ import Modal from "@/components/Modal";
 import ActionButton from "@/components/utils/ActionButton";
 import useFetch from "@/customehooks/useFetch";
 import { tourApi } from "@/services/apis";
+import "@/styles/calender.css";
 import getNextSevenDays from "@/utils/booking/GetNextSevenDays";
 import getWeekName from "@/utils/booking/getWeekName";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import "react-calendar/dist/Calendar.css";
-import "@/styles/calender.module.css";
 import Calendar from "react-calendar";
-
+import "react-calendar/dist/Calendar.css";
 import {
-  GoCalendar,
-  GoChevronLeft,
-  GoChevronRight,
-  GoDash,
-  GoPlus,
+    GoCalendar,
+    GoChevronLeft,
+    GoChevronRight
 } from "react-icons/go";
 import { useSelector } from "react-redux";
 
