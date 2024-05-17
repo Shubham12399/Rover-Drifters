@@ -196,7 +196,7 @@ const Page = () => {
           </div>
 
           {/* Quantity Selection */}
-          <SelectTravellers></SelectTravellers>
+          <SelectTravellers price={tourData?.price} currency={tourData?.currency}></SelectTravellers>
         </div>
 
         {/* Next Button  */}

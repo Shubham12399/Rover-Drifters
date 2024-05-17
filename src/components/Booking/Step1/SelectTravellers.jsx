@@ -2,7 +2,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import React, { useCallback, useEffect } from "react";
 import { GoDash, GoPlus } from "react-icons/go";
 
-const SelectTravellers = () => {
+const SelectTravellers = ({price,currency}) => {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
   const pathname = usePathname();
@@ -148,8 +148,8 @@ const SelectTravellers = () => {
                 * A group must have at least 25 adults.
               </span>
               <span className="text-xs block GTE_light">
-                * The price per group is {tourData?.tour?.currency?.symbol}{" "}
-                {tourData?.tour?.price?.sharing_price * 25} .
+                * The price per group is {currency?.symbol}{" "}
+                {price?.sharing_price * 25} .
               </span>
             </div>
           )}
