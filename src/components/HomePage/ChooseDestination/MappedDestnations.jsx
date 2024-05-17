@@ -16,6 +16,7 @@ const Mappedcities = () => {
   const allDestinations = useSelector((store) => store.allDestinations);
 
   useEffect(() => {
+    if(pathname == "/")
     if (
       (!countryName &&
         !destination?._id &&

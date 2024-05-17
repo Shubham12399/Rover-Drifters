@@ -34,14 +34,15 @@ const TourCard = ({_id,price,tour_name,destination,description,currency ,images}
           </div>
         </div>
         <div className="flex !items-strech gap-1 mt-3">
-        <Link href={`/tour/${_id}`}>
-            <Button
+        <Link href={`/tour/${_id}`} legacyBehavior={true}>
+           <a> <Button
               size="sm"
               variant="outlined"
               className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal"
             >
               Book Now
             </Button>
+            </a>
           </Link>
 
          <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0" >

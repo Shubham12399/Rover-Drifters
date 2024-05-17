@@ -1,29 +1,21 @@
 "use client";
-import "@/styles/shine.button.css";
 import CollapseComp from "@/components/Collapse";
-import useFetch from "@/customehooks/useFetch";
-import { tourApi } from "@/services/apis";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
-import {
-  GoAlert,
-  GoArrowLeft,
-  GoCheck,
-  GoCheckCircle,
-  GoClock,
-  GoLocation,
-  GoTag,
-} from "react-icons/go";
+import Stars from "@/components/Stars";
 import BottomCtaButtons from "@/components/Tour/BottomCtaButtons";
 import Itieneries from "@/components/Tour/Itieneries";
-import Stars from "@/components/Stars";
 import LocationWithIcon from "@/components/Tour/LocationWithIcon";
-import Visitors from "@/components/Tour/Visitors";
 import Overview from "@/components/Tour/Overview";
 import Specifications from "@/components/Tour/Specifications";
-import TitleSkl from "@/components/skelton/TitleSkl";
+import Visitors from "@/components/Tour/Visitors";
 import BannerSkl from "@/components/skelton/BannerSkl";
+import TitleSkl from "@/components/skelton/TitleSkl";
+import useFetch from "@/customehooks/useFetch";
+import { tourApi } from "@/services/apis";
+import "@/styles/shine.button.css";
+import { useParams } from "next/navigation";
+import {
+  GoArrowLeft
+} from "react-icons/go";
 
 export default function Page() {
   const params = useParams();
@@ -79,7 +71,7 @@ export default function Page() {
 
   return (
     <div className="max-h-auto min-h-fit">
-      <div className="relative h-[170px] w-full md:h-[60vh] select-none">
+      <div className="relative w-full h-[170px] md:h-[60vh] select-none">
         {!isLoading && (
           <img
             loading="lazy"
@@ -88,7 +80,7 @@ export default function Page() {
             className="w-full h-full object-cover object-cover"
           />
         )}
-        {isLoading && <BannerSkl className="h-full"></BannerSkl>}
+        {isLoading && <BannerSkl className="w-full h-[170px] md:h-[60vh]"></BannerSkl>}
         <div
           className="absolute top-2 left-2 text-xl w-fit cursor-pointer p-2  rounded-md GTE_light "
           onClick={() => window.history.back()}
