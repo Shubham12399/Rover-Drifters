@@ -77,18 +77,14 @@ const Carousel = () => {
         {carouselItems?.map((item, index) => (
           <swiper-slide key={index}>
             <div className="px-3 pb-3 max-h-full">
-            <img src={`/images/banner-${index+1}.jpg`} className="!w-full h-[170px] md:h-[390px] object-cover rounded-md overflow-hidden" />
+              <img
+                src={`/images/banner-${index + 1}.jpg`}
+                className="!w-full h-[170px] md:h-[390px] object-cover rounded-md overflow-hidden"
+              />
             </div>
-
           </swiper-slide>
         ))}
       </swiper-container>
-      {/* <div className="swiper-button-next" ref={nextButtonRef} style={{ color: 'red' }}>
-        Next
-      </div>
-      <div className="swiper-button-prev" ref={prevButtonRef} style={{ color: 'green' }}>
-        Prev
-      </div> */}
     </div>
   );
 };
