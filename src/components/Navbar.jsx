@@ -5,7 +5,7 @@ import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { usePathname } from "next/navigation";
-import "@/styles/navbar.css";
+import FullLogo from "./FullLogo";
 const logo = "/images/logo.png";
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
                 height={60}
               />
             </Link> */}
-            <Link href={"/"} className="font-semibold text-xl logo">Roverhub<span className="text-[1.5rem] text-green-600">.</span></Link>
+            <Link href={"/"} ><FullLogo></FullLogo></Link>
           </div>
 
           <div className="flex gap-x-3 items-center">

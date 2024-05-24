@@ -43,9 +43,9 @@ export default function RootLayout({ children }) {
         {/* <ReactQueryProvider> */}
           {/* {children} */}
         {/* </ReactQueryProvider> */}
-        <Suspense fallback="">
+        {/* <Suspense fallback="">
           <BottomNav></BottomNav>
-        </Suspense>
+        </Suspense> */}
        
       </body>
     </html>
