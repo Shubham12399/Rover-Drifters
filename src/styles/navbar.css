@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Acumin-BdPro;
+  src: url("/fonts/Acumin-BdPro.ttf");
+}
+.logo {
+  font-family: Acumin-BdPro;
+}

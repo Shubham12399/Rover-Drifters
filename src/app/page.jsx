@@ -1,4 +1,5 @@
 "use client";
+import Carousel from "@/components/Carousel/Carousel";
 // import {onLCP, onFID, onCLS} from 'web-vitals';
 
 import React, { Suspense, useState } from "react";
@@ -30,7 +31,7 @@ export default function Home() {
         {/* Carousel  */}
         <div className="w-full">
           <Suspense fallback="">
-            <CarouselComp></CarouselComp>
+            <Carousel></Carousel>
           </Suspense>
         </div>
         {/*action center*/}
