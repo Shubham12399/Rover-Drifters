@@ -5,6 +5,7 @@ import Carousel from "@/components/Carousel/Carousel";
 import DefaultHome from "@/components/HomePage/DefaultHome";
 import TabsAndPlanTours from "@/components/HomePage/TabsAndPlanTours";
 import WhereTo from "@/components/HomePage/WhereTo";
+import { useState } from "react";
 var window
 const layout = ({ children }) => {
 
@@ -14,7 +15,7 @@ const layout = ({ children }) => {
                 {/* ------------------------------Header section ----------------------------------------------------- */}
                 <Carousel></Carousel>
                 {/* <SearchBar></SearchBar> */}
-               <WhereTo className="sm:hidden"></WhereTo>
+               <WhereTo className="sm:hidden" ></WhereTo>
 
                 <TabsAndPlanTours></TabsAndPlanTours>
                 <div className="overflow-x-hidden">

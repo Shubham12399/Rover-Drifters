@@ -1,10 +1,24 @@
-import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { GoSearch } from "react-icons/go";
 
 const WhereTo = ({ className }) => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  useEffect(() => {
+    if (isOpenModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpenModal]);
+
   return (
     <div className={`w-full max-w-maxContent mx-auto py-2 px-4 ${className} `}>
-      <div className="w-full rounded-full bg-white border border-gray-300 flex drop-shadow-md">
+      <div
+        className="w-full rounded-full bg-white border border-gray-300 flex drop-shadow-md cursor-pointer"
+        onClick={() => setIsOpenModal(true)}
+      >
         <div className="py-2 pl-4 pr-3 flex items-center">
           <GoSearch className="text-lg"></GoSearch>
         </div>
@@ -15,6 +29,39 @@ const WhereTo = ({ className }) => {
           </p>
         </div>
       </div>
+      <AnimatePresence>
+      {isOpenModal && (
+        <motion.div
+        exit={{opacity:"0"}}
+        transition={{
+          y: { type: "spring", bounce: 0 },
+          delay:.3
+        }}
+          className="w-full h-full fixed top-[50px] left-0 bg-[rgba(0,_0,_0,_0.4)] z-[1000]"
+          onClick={() => setIsOpenModal(false)}
+        ></motion.div>
+      )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {isOpenModal && (
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0" }}
+            exit={{y:"100%"}}
+            transition={{
+              y: { type: "spring", bounce: 0 },
+            }}
+            className={`w-full fixed bottom-0 min-h-[470px] rounded-tl-2xl rounded-tr-2xl bg-white z-[1003] left-0 `}
+          >
+            <div className="w-full mt-4 px-6">
+            <h1 className="text-lg font-medium mb-2">Plan Your Trip!</h1>
+            </div>
+            <div className="px-6 py-3">
+
+            </div>  
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
