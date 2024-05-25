@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper styles
 import "swiper/css";
@@ -65,7 +66,6 @@ const CarouselWithNavigate = ({ children }) => {
       `,
       ],
     };
-
     Object.assign(swiperContainer, params);
     swiperContainer.initialize();
   }, []);
@@ -74,7 +74,7 @@ const CarouselWithNavigate = ({ children }) => {
       <swiper-container
         ref={swiperRef}
         slides-per-view={
-          window?.innerWidth < 500 ? 1 : window?.innerWidth < 700 ? 3 : 4
+         typeof window !== "undefined" ? window?.innerWidth < 500 ? 1 : window?.innerWidth < 700 ? 3 : 4 : null
         }
         init="false"
         class="h-full relative"

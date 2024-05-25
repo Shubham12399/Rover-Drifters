@@ -6,7 +6,6 @@ import DefaultHome from "@/components/HomePage/DefaultHome";
 import TabsAndPlanTours from "@/components/HomePage/TabsAndPlanTours";
 import WhereTo from "@/components/HomePage/WhereTo";
 import { useState } from "react";
-var window
 const layout = ({ children }) => {
 
     return (
@@ -21,7 +20,6 @@ const layout = ({ children }) => {
                 <div className="overflow-x-hidden">
                     {children}
                 </div>
-                <DefaultHome></DefaultHome>
 
                 {
                     //{ /* {/*action center*/}

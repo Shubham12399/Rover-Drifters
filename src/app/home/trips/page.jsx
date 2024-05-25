@@ -1,4 +1,5 @@
 "use client";
+
 import CarouselWithNavigate from "@/components/CarouselWithNavigate";
 import ChooseDestination from "@/components/HomePage/ChooseDestination/ChooseDestination";
 import { motion } from "framer-motion";
