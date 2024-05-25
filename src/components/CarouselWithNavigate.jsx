@@ -7,6 +7,7 @@ register();
 
 const CarouselWithNavigate = ({ children }) => {
   const swiperRef = useRef(null);
+  const [slideView,setSlideView] = useState(1);
   useEffect(() => {
     const swiperContainer = swiperRef.current;
     const params = {
@@ -69,13 +70,18 @@ const CarouselWithNavigate = ({ children }) => {
     Object.assign(swiperContainer, params);
     swiperContainer.initialize();
   }, []);
+  useEffect(() => {
+    if(typeof window !== "undefined"){
+      if(window.innerWidth < 500) setSlideView(1)
+      else if(window.innerWidth < 700) setSlideView(3)
+      else if(window.innerWidth > 700) setSlideView(4)
+    }
+  },[]);
   return (
     <div className="relative h-[180px] overflow-hidden max-w-maxContent mx-auto">
       <swiper-container
         ref={swiperRef}
-        slides-per-view={
-         typeof window !== "undefined" ? window?.innerWidth < 500 ? 1 : window?.innerWidth < 700 ? 3 : 4 : null
-        }
+        slides-per-view={slideView}
         init="false"
         class="h-full relative"
       >
