@@ -4,6 +4,7 @@ import Carousel from "@/components/Carousel/Carousel";
 import DefaultHome from "@/components/HomePage/DefaultHome";
 import TabsAndPlanTours from "@/components/HomePage/TabsAndPlanTours";
 import TabsSelection from "@/components/HomePage/TabsAndPlanTours/TabsSelection";
+import WhereTo from "@/components/HomePage/WhereTo";
 import SearchBar from "@/components/SearchBar";
 // import {onLCP, onFID, onCLS} from 'web-vitals';
 
@@ -30,11 +31,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between bg-white">
       <div className="w-full pb-14">
         {/* ------------------------------Header section ----------------------------------------------------- */}
-        <SearchBar></SearchBar>
+        <Carousel></Carousel>
+        {/* <SearchBar></SearchBar> */}
+        <WhereTo></WhereTo>
         <TabsAndPlanTours></TabsAndPlanTours>
 
         <DefaultHome></DefaultHome>
-      
+
         {
           //{ /* {/*action center*/}
           //<div>

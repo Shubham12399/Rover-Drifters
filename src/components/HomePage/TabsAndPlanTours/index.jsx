@@ -3,7 +3,7 @@ import TabsSelection from "./TabsSelection";
 import PlanTours from "./PlanTours";
 
 const TabsAndPlanTours = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
@@ -14,7 +14,7 @@ const TabsAndPlanTours = () => {
   return (
     <div>
       <TabsSelection setIsOpen={setIsOpen} isOpen={isOpen}></TabsSelection>
-      <PlanTours setIsOpen={setIsOpen} isOpen={isOpen}></PlanTours>
+      {/* <PlanTours setIsOpen={setIsOpen} isOpen={isOpen}></PlanTours> */}
     </div>
   );
 };
