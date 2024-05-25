@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -37,17 +38,25 @@ body {
   src: url("/fonts/GTEestiProDisplay-Regular.ttf");
   font-display: swap;
 }
-
+@font-face {
+  font-family: "DM_sans";
+  src: url("/fonts/DM_sans.ttf");
+  font-display: swap;
+}
 * {
-  font-family: gte-regular;
+  font-family:DM_Sans, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
-
-
 .hide-scrollbar::-webkit-scrollbar{
   appearance: none;
   display: none;
+}
+.gte_regular{
+  font-family: gte-regular;
 }
 /* .GTE_light {
   font-family: geist-light !important;
@@ -58,6 +67,7 @@ body {
 .GTE_bold {
   font-family: geist-bold !important;
 }
-.GTE_regular {
-  font-family: geist-regular !important;
-} */
+*/
+/* .GTE_regular {
+  font-family: "DM Sans", sans-serif !important;
+}  */

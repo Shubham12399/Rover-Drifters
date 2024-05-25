@@ -1,24 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { usePathname } from "next/navigation";
 import FullLogo from "./FullLogo";
-const logo = "/images/logo.png";
+import WhereTo from "./HomePage/WhereTo";
+// const logo = "/images/logo.png";
 
 const Navbar = () => {
   const pathname = usePathname();
   return (
     <>
       <div className="w-full sticky bg-white top-0 z-[9999]">
-        <nav className="relative z-50 max-w-maxContent mx-auto py-0 md:py-2 pr-4 pl-2 flex items-center justify-between h-[50px]">
-        
+        <nav className="relative z-50 max-w-maxContent mx-auto py-0 md:py-2 pr-4 pl-2 flex items-center justify-between min-h-[50px]">
           <div className="flex gap-x-3 items-center pl-4">
-          <div>
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ui-svg-inline"><path d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path></svg>
-          </div>
+            <div>
+              <svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="ui-svg-inline"
+              >
+                <path d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path>
+              </svg>
+            </div>
             {/* <Link
               href={"/"}
               className="select-none w-[120px] sm:w-[125px] md:w-[160px] bg-gray-300"
@@ -32,25 +41,26 @@ const Navbar = () => {
                 height={60}
               />
             </Link> */}
-            <Link href={"/"} ><FullLogo></FullLogo></Link>
+            <Link href={"/"}>
+              <FullLogo></FullLogo>
+            </Link>
           </div>
 
+          <WhereTo className="hidden sm:block"></WhereTo>
           <div className="flex gap-x-3 items-center">
             <div className="hidden md:block mr-4">
-              <ul className="flex gap-x-8 items-center font-thin text-gray-600">
+              <ul className="flex gap-x-8 items-center text-gray-900">
                 <Link
                   href={"/"}
                   shallow={true}
-                  className={`font-thin ${
-                    pathname == "/" && "text-[#333] underline"
-                  }`}
+                  className={`${pathname == "/" && "text-[#333] underline"}`}
                 >
                   Home
                 </Link>
                 <Link
                   href={"/tours"}
                   shallow={true}
-                  className={`font-thin ${
+                  className={`${
                     pathname == "/tours" && "text-[#333] underline"
                   }`}
                 >
@@ -59,7 +69,7 @@ const Navbar = () => {
                 <Link
                   href={"/packages"}
                   shallow={true}
-                  className={`font-thin ${
+                  className={`${
                     pathname == "/packages" && "text-[#333] underline"
                   }`}
                 >
@@ -68,7 +78,7 @@ const Navbar = () => {
                 <Link
                   href={"/hotels"}
                   shallow={true}
-                  className={`font-thin ${
+                  className={`${
                     pathname == "/hotels" && "text-[#333] underline"
                   }`}
                 >
@@ -77,7 +87,7 @@ const Navbar = () => {
                 <Link
                   href={"/planners"}
                   shallow={true}
-                  className={`font-thin ${
+                  className={`${
                     pathname == "/planners" && "text-[#333] underline"
                   }`}
                 >

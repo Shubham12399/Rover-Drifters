@@ -1,9 +1,9 @@
 import React from "react";
 import { GoSearch } from "react-icons/go";
 
-const WhereTo = () => {
+const WhereTo = ({ className }) => {
   return (
-    <div className="w-full max-w-maxContent mx-auto py-2 px-4">
+    <div className={`w-full max-w-maxContent mx-auto py-2 px-4 ${className} `}>
       <div className="w-full rounded-full bg-white border border-gray-300 flex drop-shadow-md">
         <div className="py-2 pl-4 pr-3 flex items-center">
           <GoSearch className="text-lg"></GoSearch>

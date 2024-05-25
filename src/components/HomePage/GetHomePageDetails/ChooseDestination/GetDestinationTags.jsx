@@ -24,7 +24,6 @@ const GetDestinationTags = () => {
     url: countryApi.GET_ALL_COUNTRIES,
     varName: "destinationsApi"
   });
-
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
   const pathname = usePathname();
@@ -39,7 +38,7 @@ const GetDestinationTags = () => {
 
   return (
     <>
-      <div className="flex items-start overflow-auto gap-2 py-2 hide-scrollbar font-normal GTE_light pr-3">
+      <div className="flex items-start overflow-auto gap-2 pb-2 hide-scrollbar font-normal GTE_light pr-3 select-none">
         {!isLoading &&
           destinationsApi?.map((destination, index) => {
             return (
@@ -57,18 +56,18 @@ const GetDestinationTags = () => {
                 // href={{ pathname: "/", query: { country: destination.name } }}
                 // scroll={false}
                 // shallow={true}
-                className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${destination._id == selectedId?._id &&
-                  "text-white bg-[#ff621c] "
+                className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm bg-white shadow-md hover:bg-gray-100 text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${destination._id == selectedId?._id &&
+                  "border-2 border-black"
                   }`}
                 key={index}
               >
-                <img
+                {/* <img
                   //   src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png"
                   src={destination?.image}
                   className="rounded-full w-[20px] h-[20px] border"
                   alt=""
                   loading="lazy"
-                />
+                /> */}
                 <span className="font-normal">{destination?.name}</span>
               </div>
             );

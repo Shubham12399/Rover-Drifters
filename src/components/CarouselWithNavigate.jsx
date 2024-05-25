@@ -4,8 +4,7 @@ import "swiper/css";
 import { register } from "swiper/element/bundle";
 register();
 
-const Carousel = () => {
-  const [carouselItems, setCarouselItems] = useState([...Array(9)]);
+const CarouselWithNavigate = ({ children }) => {
   const swiperRef = useRef(null);
   useEffect(() => {
     const swiperContainer = swiperRef.current;
@@ -15,7 +14,9 @@ const Carousel = () => {
       // These are new...
       injectStyles: [
         `
-        
+        .swiper-slide{
+            width:70%;
+        }
           .swiper-button-next,
           .swiper-button-prev {
             background-color: white;
@@ -30,12 +31,12 @@ const Carousel = () => {
           .swiper-button-next{
             position:absolute !important;
             right:2rem;
-            top:86%;
+            top:84%;
           }
           .swiper-button-prev{
             position:absolute !important;
             left:calc(100% - 7rem);
-            top:86%;
+            top:84%;
           }
           .swiper-button-next svg,
           .swiper-button-prev svg {
@@ -56,7 +57,6 @@ const Carousel = () => {
           .swiper-button-prev {
             width:25px !important;
             height:25px !important;
-            display:none;
           }
           .swiper-button-prev{
             left:calc(100% - 6rem);
@@ -70,21 +70,19 @@ const Carousel = () => {
     swiperContainer.initialize();
   }, []);
   return (
-    <div className="relative h-[160px] md:h-[400px] overflow-hidden max-w-maxContent mx-auto">
-      <swiper-container ref={swiperRef} init="false" class="h-full">
-        {carouselItems?.map((item, index) => (
-          <swiper-slide key={index}>
-            <div className="px-3 pb-3 max-h-full">
-              <img
-                src={`/images/banner-${index + 1}.jpg`}
-                className="!w-full h-[150px] md:h-[390px] object-cover rounded-2xl overflow-hidden"
-              />
-            </div>
-          </swiper-slide>
-        ))}
+    <div className="relative h-[180px] overflow-hidden max-w-maxContent mx-auto">
+      <swiper-container
+        ref={swiperRef}
+        slides-per-view={
+          window?.innerWidth < 500 ? 1 : window?.innerWidth < 700 ? 3 : 4
+        }
+        init="false"
+        class="h-full relative"
+      >
+        {children}
       </swiper-container>
     </div>
   );
 };
 
-export default Carousel;
+export default CarouselWithNavigate;

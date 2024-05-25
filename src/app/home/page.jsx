@@ -8,13 +8,14 @@ import WhereTo from '@/components/HomePage/WhereTo';
 // import { Carousel } from '@material-tailwind/react';
 import React from 'react'
 
+
 const Home = () => {
+  // console.log(window?.innerWidth)
   return (
     <div className="w-full pb-14">
     {/* ------------------------------Header section ----------------------------------------------------- */}
     <Carousel></Carousel>
     {/* <SearchBar></SearchBar> */}
-    <WhereTo></WhereTo>
     <TabsAndPlanTours></TabsAndPlanTours>
    
     <DefaultHome></DefaultHome>
