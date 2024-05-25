@@ -10,7 +10,7 @@ import { GoPackage } from "react-icons/go";
 
 const TabsSelection = ({ setIsOpen, isOpen }) => {
   return (
-    <div className="w-full max-w-maxContent mx-auto border-b border-gray-200 py-2 overflow-auto pl-2 md:px-4 flex items-center sticky top-[50px] z-[100] select-none bg-white pr-2">
+    <div className="w-full max-w-maxWidthContent mx-auto border-b border-gray-200 py-2 overflow-auto pl-2 md:px-4 flex items-center sticky top-[50px] z-[100] select-none bg-white pr-2">
       <div className="flex justify-start items-center gap-x-2">
         <Link href={"/home/trips"} className="px-3 py-1 flex justify-center items-center gap-x-2  text-gray-900 text-base font-medium hover:bg-gray-100 rounded-md min-w-fit cursor-pointer">
           <FaPlaneDeparture className="text-gray-600"></FaPlaneDeparture>
