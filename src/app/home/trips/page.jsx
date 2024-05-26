@@ -17,7 +17,7 @@ const Page = () => {
       </div>
 
       <Suspense>
-        <TypesToursSec></TypesToursSec>
+        <TypesToursSec></TypesToursSec>   
       </Suspense>
     </motion.div>
   );
