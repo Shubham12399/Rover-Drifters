@@ -38,7 +38,7 @@ const WhereTo = ({ className }) => {
           y: { type: "spring", bounce: 0 },
           delay:.3
         }}
-          className="w-full h-full fixed top-[70px] left-0 bg-[rgba(0,_0,_0,_0.4)] z-[1000]"
+          className="w-full h-full fixed top-[42px] md:top-[70px] left-0 bg-[rgba(0,_0,_0,_0.4)] z-[1000]"
           onClick={() => setIsOpenModal(false)}
         ></motion.div>
       )}
