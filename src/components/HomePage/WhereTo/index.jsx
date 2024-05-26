@@ -33,7 +33,7 @@ const WhereTo = ({ className }) => {
           </div>
         </div>
 
-        <div className="py-2 pr-3 flex items-center">
+        <div className="py-2 pr-2 flex items-center">
           <div className="bg-[#ff612c] rounded-full w-[40px] h-[40px] flex justify-center items-center">
             <FiSearch className="text-lg text-white"></FiSearch>
           </div>
