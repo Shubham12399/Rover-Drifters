@@ -16,7 +16,7 @@ const layout = ({ children }) => {
                 {/* <SearchBar></SearchBar> */}
                <WhereTo className="sm:hidden" ></WhereTo>
 
-                {/* <TabsAndPlanTours></TabsAndPlanTours> */}
+                <TabsAndPlanTours></TabsAndPlanTours>
                 <div className="overflow-x-hidden">
                     {children}
                 </div>
