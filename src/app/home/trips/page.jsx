@@ -2,6 +2,7 @@
 
 import CarouselWithNavigate from "@/components/CarouselWithNavigate";
 import ChooseDestination from "@/components/HomePage/ChooseDestination/ChooseDestination";
+import TravelsFirstChoice from "@/components/HomePage/TravelsFavChoice";
 import { motion } from "framer-motion";
 const Page = () => {
 
@@ -11,6 +12,7 @@ const Page = () => {
         {/* <h1 className="text-lg">Choose Destinations</h1> */}
         <ChooseDestination></ChooseDestination>
       </div>
+      {/* <TravelsFirstChoice></TravelsFirstChoice> */}
       <div className="w-full max-w-maxWidthContent mx-auto px-4">
         <h1 className="text-lg font-medium mb-3">Top destinations</h1>
         <CarouselWithNavigate>
@@ -61,8 +63,8 @@ const Page = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-            <div className="w-full overflow-auto hide-scrollbar">
-              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto absolute bottom-2 left-1 z-20">
+            <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto  hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
                 </div>
@@ -81,8 +83,8 @@ const Page = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-            <div className="w-full overflow-auto hide-scrollbar">
-              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto absolute bottom-2 left-1 z-20">
+             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
                 </div>
@@ -101,8 +103,8 @@ const Page = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-            <div className="w-full overflow-auto hide-scrollbar">
-              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto absolute bottom-2 left-1 z-20">
+             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
                 </div>
@@ -121,8 +123,8 @@ const Page = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-            <div className="w-full overflow-auto hide-scrollbar">
-              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto absolute bottom-2 left-1 z-20">
+             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
                 </div>
@@ -141,8 +143,8 @@ const Page = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-            <div className="w-full overflow-auto hide-scrollbar">
-              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto absolute bottom-2 left-1 z-20">
+             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+              <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
                 </div>

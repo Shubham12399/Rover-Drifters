@@ -74,10 +74,10 @@ const Carousel = () => {
       <swiper-container ref={swiperRef} init="false" class="h-full">
         {carouselItems?.map((item, index) => (
           <swiper-slide key={index}>
-            <div className="px-3 pb-3 max-h-full">
+            <div className="max-h-full">
               <img
                 src={`/images/banner-${index + 1}.jpg`}
-                className="!w-full h-[150px] md:h-[390px] object-cover rounded-2xl overflow-hidden"
+                className="!w-full h-[150px] md:h-[390px] object-cover overflow-hidden"
               />
             </div>
           </swiper-slide>
