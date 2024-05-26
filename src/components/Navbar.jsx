@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full sticky bg-white top-0 z-[9999]">
-        <nav className="relative z-50 max-w-maxContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[50px]">
+        <nav className="relative z-50 max-w-maxContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[40px]">
           <div className="flex gap-x-3 items-center pl-2">
             <div>
               <svg
