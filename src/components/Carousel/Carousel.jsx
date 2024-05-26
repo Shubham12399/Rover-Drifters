@@ -70,7 +70,7 @@ const Carousel = () => {
     swiperContainer.initialize();
   }, []);
   return (
-    <div className="relative h-[170px] md:h-[400px] overflow-hidden max-w-maxContent mx-auto">
+    <div className="relative h-[170px] md:h-[340px] overflow-hidden max-w-maxContent mx-auto">
       <swiper-container ref={swiperRef} init="false" class="h-full">
         {carouselItems?.map((item, index) => (
           <swiper-slide key={index}>
