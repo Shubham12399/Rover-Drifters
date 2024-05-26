@@ -52,7 +52,7 @@ const layout = ({ children }) => {
                     //  </Suspense>
                 }
 
-                <BottomBar></BottomBar>
+                {/* <BottomBar></BottomBar> */}
             </div>
         </main>
     )

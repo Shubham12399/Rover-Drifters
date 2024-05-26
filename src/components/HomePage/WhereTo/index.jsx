@@ -14,9 +14,9 @@ const WhereTo = ({ className }) => {
   }, [isOpenModal]);
 
   return (
-    <div className={`w-full max-w-maxContent mx-auto py-2 px-4 ${className} `}>
+    <div className={`w-full mx-auto py-2 px-4 md:max-w-fit`}>
       <div
-        className="w-full rounded-full bg-white border border-gray-300 flex drop-shadow-md cursor-pointer"
+        className={`rounded-full bg-white border border-gray-300 flex drop-shadow-md cursor-pointer w-full max-w-[400px] ${className} `}
         onClick={() => setIsOpenModal(true)}
       >
         <div className="py-2 pl-4 pr-3 flex items-center">

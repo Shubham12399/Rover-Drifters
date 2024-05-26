@@ -5,6 +5,7 @@ import Carousel from '@/components/Carousel/Carousel';
 import CarouselWithNavigate from '@/components/CarouselWithNavigate';
 import DefaultHome from '@/components/HomePage/DefaultHome';
 import TabsAndPlanTours from '@/components/HomePage/TabsAndPlanTours';
+import TravelsFirstChoice from '@/components/HomePage/TravelsFavChoice';
 import WhereTo from '@/components/HomePage/WhereTo';
 // import { Carousel } from '@material-tailwind/react';
 import React from 'react'
@@ -16,8 +17,8 @@ const Home = () => {
     <div className="w-full pb-14 mt-4">
     {/* ------------------------------Header section ----------------------------------------------------- */}
     {/* <SearchBar></SearchBar> */}
-     
-    {/* <TravelsFirstChoice></TravelsFirstChoice> */}
+ 
+    <TravelsFirstChoice></TravelsFirstChoice>
     <div className="w-full max-w-maxWidthContent mx-auto px-4">
         <h1 className="text-lg font-medium mb-3">Top destinations</h1>
         <CarouselWithNavigate>
@@ -196,7 +197,6 @@ const Home = () => {
         //  </Suspense>
     }
 
-    <BottomBar></BottomBar>
 </div>
   )
 }

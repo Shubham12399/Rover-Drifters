@@ -7,14 +7,15 @@ import { GoSearch } from "react-icons/go";
 import { usePathname } from "next/navigation";
 import FullLogo from "./FullLogo";
 import WhereTo from "./HomePage/WhereTo";
-// const logo = "/images/logo.png";
+import Image from "next/image";
+const logo = "/short_logo.png";
 
 const Navbar = () => {
   const pathname = usePathname();
   return (
     <>
       <div className="w-full sticky bg-white top-0 z-[9999]">
-        <nav className="relative z-50 max-w-maxContent mx-auto py-0 md:py-2 pr-4 pl-2 flex items-center justify-between min-h-[50px]">
+        <nav className="relative z-50 max-w-maxContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[50px]">
           <div className="flex gap-x-3 items-center pl-4">
             <div>
               <svg
@@ -28,27 +29,28 @@ const Navbar = () => {
                 <path d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path>
               </svg>
             </div>
-            {/* <Link
+            <Link
               href={"/"}
-              className="select-none w-[120px] sm:w-[125px] md:w-[160px] bg-gray-300"
+              className="select-none "
             >
               <Image
                 src={logo}
                 alt="company_logo"
-                className="block !w-full"
+                className="w-[100px] sm:w-[100px] md:w-[110px] bg-red-400 -mt-2"
                 // sizes="(max-width:400px) width:80px;"
-                width={120}
+                width={100}
                 height={60}
               />
-            </Link> */}
-            <Link href={"/"}>
-              <FullLogo></FullLogo>
             </Link>
+            {/* <Link href={"/"}>
+              <FullLogo></FullLogo>
+            </Link> */}
           </div>
 
-          <WhereTo className="hidden sm:block"></WhereTo>
           <div className="flex gap-x-3 items-center">
-            <div className="hidden md:block mr-4">
+            <WhereTo className="hidden sm:flex !drop-shadow-none !border-none !rounded-none"></WhereTo>
+
+            {/* <div className="hidden md:block mr-4">
               <ul className="flex gap-x-8 items-center text-gray-900">
                 <Link
                   href={"/"}
@@ -94,7 +96,7 @@ const Navbar = () => {
                   Planners
                 </Link>
               </ul>
-            </div>
+            </div> */}
             <div>
               <Link
                 href={"/search"}

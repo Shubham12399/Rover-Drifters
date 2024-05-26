@@ -4,33 +4,35 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import {
   FaChevronDown,
+  FaDotCircle,
   FaHotel,
   FaPlaneDeparture,
   FaPlaneSlash,
 } from "react-icons/fa";
 import { GoPackage } from "react-icons/go";
 import { IoHome } from "react-icons/io5";
+import { MdMoreHoriz } from "react-icons/md";
 
 const TabsSelection = ({ setIsOpen, isOpen }) => {
   const pathname = usePathname();
   const [allTags, setAllTags] = useState([
     {
-      icon: <IoHome className="text-gray-600"></IoHome>,
+      icon: <IoHome className="text-gray-600 md:text-lg"></IoHome>,
       name: "Home",
       link:"/home"
     },
     {
-      icon: <FaPlaneDeparture className="text-gray-600"></FaPlaneDeparture>,
+      icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
       name: "Trips",
       link:"/home/trips"
     },
     {
-      icon: <FaHotel className="text-gray-600"></FaHotel>,
+      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
       name: "Hotels",
       link:"/home/hotels"
     },
     {
-      icon: <GoPackage className="text-gray-600"></GoPackage>,
+      icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
       name: "Packages",
       link:"/home/packages"
     },
@@ -44,7 +46,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={tag.link}
-              className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer ${
+               className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer ${
                 isActive && "border-b-black"
               }`}
             >
@@ -54,15 +56,14 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
           );
         })}
 
-        {/* <Link
-          href={"/home/hotels"}
-          className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2  text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer${
-            pathname === "/home/trips" && "border-b-black"
-          }`}
+        <button
+          // href={"/home/hotels"}
+          className={`mx-1 flex flex-col justify-center items-center gap-x-2 text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer`}
         >
-          <span>Hotels</span>
-        </Link>
-        <Link
+          <MdMoreHoriz className="md:text-lg mb-[.15rem]"></MdMoreHoriz>
+          <span>More</span>
+        </button>
+        {/* <Link
           href={"/home/packages"}
           className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2  text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer${
             pathname === "/home/trips" && "border-b-black"
