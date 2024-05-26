@@ -23,13 +23,28 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     // },
     {
       icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
-      name: "Trips",
-      link:"/home/trips"
+      name: "Tours & Activities",
+      link:"/home/tours"
     },
     {
       icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
-      name: "Hotels",
-      link:"/home/hotels"
+      name: "Outdoor",
+      link:"/home/outdoor"
+    },
+    {
+      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      name: "Attraction Passes",
+      link:"/home/attraction"
+    },
+    {
+      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      name: "Transport",
+      link:"/home/transport "
+    },
+    {
+      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      name: "Food & Relaxation",
+      link:"/home/food-relaxatation"
     },
     {
       icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
