@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 import FullLogo from "./FullLogo";
 import WhereTo from "./HomePage/WhereTo";
 import Image from "next/image";
-const logo = "/short_logo.png";
+// const logo = "/short_logo.png";
+const logo = "/amfeza_logo.png";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -16,7 +17,7 @@ const Navbar = () => {
     <>
       <div className="w-full sticky bg-white top-0 z-[9999]">
         <nav className="relative z-50 max-w-maxContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[50px]">
-          <div className="flex gap-x-3 items-center pl-4">
+          <div className="flex gap-x-3 items-center pl-2">
             <div>
               <svg
                 width="20"
@@ -36,7 +37,7 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="company_logo"
-                className="w-[100px] sm:w-[100px] md:w-[110px] bg-red-400 -mt-2"
+                className="w-[100px] sm:w-[100px] md:w-[110px] md:-mt-2"
                 // sizes="(max-width:400px) width:80px;"
                 width={100}
                 height={60}
