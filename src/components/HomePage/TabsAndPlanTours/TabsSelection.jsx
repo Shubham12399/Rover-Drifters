@@ -22,27 +22,27 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     //   link:"/home"
     // },
     {
-      icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
+      icon: <FaPlaneDeparture className="text-gray-600 md:text-lg group-hover:text-white"></FaPlaneDeparture>,
       name: "Tours",
       link:"/home/trips"
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
       name: "Outdoor",
       link:"/home/outdoor"
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
       name: "Attractions",
       link:"/home/attraction"
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
       name: "Transport",
       link:"/home/transport "
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
+      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
       name: "Food & Relaxation",
       link:"/home/food-relaxatation"
     },
@@ -60,8 +60,8 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
           return (
             <Link
               key={tag.name}
-              href={tag.link}
-               className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-gray-200 rounded-lg ${
+              href={!isActive ? tag.link  : "/home"}
+               className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
                 isActive && "bg-gray-200"
               }`}
             >
