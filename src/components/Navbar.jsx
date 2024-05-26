@@ -3,11 +3,14 @@
 import Link from "next/link";
 // import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
-import { GoSearch } from "react-icons/go";
+import { GoHeart, GoSearch } from "react-icons/go";
 import { usePathname } from "next/navigation";
 import FullLogo from "./FullLogo";
+import { FiSearch } from "react-icons/fi";
 import WhereTo from "./HomePage/WhereTo";
+import { AiOutlineHeart } from "react-icons/ai";
 import Image from "next/image";
+import { FaRegHeart } from "react-icons/fa6";
 // const logo = "/short_logo.png";
 const logo = "/amfeza_logo.png";
 
@@ -16,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full sticky bg-white top-0 z-[9999]">
-        <nav className="relative z-50 max-w-maxContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[40px]">
+        <nav className="relative z-50 max-w-maxWidthContent mx-auto pr-4 pl-2 flex items-center justify-between min-h-[40px]">
           <div className="flex gap-x-3 items-center pl-2 md:pl-4">
             <div>
               <svg
@@ -103,7 +106,8 @@ const Navbar = () => {
                 href={"/search"}
                 className="block text-richblack-900 cursor-pointer "
               >
-                <GoSearch className="text-lg"></GoSearch>
+                {/* <GoSearch className="text-lg"></GoSearch> */}
+                <FiSearch className="text-lg"/>
               </Link>
             </div>
             <div>
@@ -111,7 +115,7 @@ const Navbar = () => {
                 href={"/cart"}
                 className="block text-richblack-900 cursor-pointer "
               >
-                <IoCartOutline className="text-xl"></IoCartOutline>
+                <AiOutlineHeart className="text-xl"></AiOutlineHeart>
               </Link>
             </div>
           </div>
