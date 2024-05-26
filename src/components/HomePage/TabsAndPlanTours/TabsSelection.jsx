@@ -46,8 +46,8 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={tag.link}
-               className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer ${
-                isActive && "border-b-black"
+               className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-gray-200 rounded-lg ${
+                isActive && "bg-gray-200"
               }`}
             >
               {tag.icon}
@@ -58,10 +58,9 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
 
         <button
           // href={"/home/hotels"}
-          className={`mx-1 flex flex-col justify-center items-center gap-x-2 text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer`}
+          className={`mx-1 text-gray-900 px-3 py-1 flex justify-center items-stretch gap-x-2 text-sm font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-gray-200 rounded-lg`}
         >
-          <MdMoreHoriz className="md:text-lg mb-[.15rem]"></MdMoreHoriz>
-          <span>More</span>
+          <MdMoreHoriz className="md:text-lg"></MdMoreHoriz>
         </button>
         {/* <Link
           href={"/home/packages"}
