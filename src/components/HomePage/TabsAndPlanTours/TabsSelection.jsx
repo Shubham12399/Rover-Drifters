@@ -24,7 +24,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     {
       icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
       name: "Tours",
-      link:"/home/tours"
+      link:"/home/trips"
     },
     {
       icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
