@@ -1,8 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { GoSearch } from "react-icons/go";
-import { FiSearch } from "react-icons/fi";
-import { FaLocationArrow, FaLocationPin } from "react-icons/fa6";
 import { VscSettings } from "react-icons/vsc";
 const WhereTo = ({ className }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -25,7 +22,7 @@ const WhereTo = ({ className }) => {
           
           <div className="pl-8">
             <h2 className="text-sm GTE_regular">Yo! Going where?</h2>
-            <div className="text-[11px] text-gray-500 font-normal gap-x-[.4rem] GTE_light flex items-center">
+            <div className="text-[11px] text-gray-500 font-normal gap-x-2 GTE_light flex items-center">
               <span className="GTE_light">Destination</span> 
               <span className="inline-block w-[2px] h-[2px] bg-gray-500 rounded-full "></span> 
               <span className="GTE_light">Type</span>
