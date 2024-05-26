@@ -16,11 +16,11 @@ import { MdMoreHoriz } from "react-icons/md";
 const TabsSelection = ({ setIsOpen, isOpen }) => {
   const pathname = usePathname();
   const [allTags, setAllTags] = useState([
-    {
-      icon: <IoHome className="text-gray-600 md:text-lg"></IoHome>,
-      name: "Home",
-      link:"/home"
-    },
+    // {
+    //   icon: <IoHome className="text-gray-600 md:text-lg"></IoHome>,
+    //   name: "Home",
+    //   link:"/home"
+    // },
     {
       icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
       name: "Trips",
