@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { FiSearch } from "react-icons/fi";
 import { FaLocationArrow, FaLocationPin } from "react-icons/fa6";
-
+import { VscSettings } from "react-icons/vsc";
 const WhereTo = ({ className }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
@@ -18,24 +18,26 @@ const WhereTo = ({ className }) => {
   return (
     <div className={`w-full mx-auto py-2 px-4 md:max-w-fit`}>
       <div
-        className={`rounded-full bg-white border border-gray-300 flex justify-between drop-shadow-md cursor-pointer w-full max-w-[400px] ${className} `}
+        className={`rounded-full bg-white border-gray-300 flex items-center justify-between shadow-[0_0_10px_rgba(0,_0,_0,_0.09)] cursor-pointer w-full max-w-[400px] ${className} `}
         onClick={() => setIsOpenModal(true)}
       >
-        <div className="pl-5 py-2 flex items-center">
-          <div>
-            <FaLocationArrow className="text-xl"></FaLocationArrow>
+        {/* <div className="pl-5 py-2 flex items-center"> */}
+          
+          <div className="pl-8">
+            <h2 className="text-sm GTE_regular">Yo! Going where?</h2>
+            <div className="text-[11px] text-gray-500 font-normal gap-x-[.4rem] GTE_light flex items-center">
+              <span className="GTE_light">Destination</span> 
+              <span className="inline-block w-[2px] h-[2px] bg-gray-500 rounded-full "></span> 
+              <span className="GTE_light">Type</span>
+               <span className="inline-block w-[2px] h-[2px] bg-gray-500 rounded-full "></span> 
+               <span className="GTE_light">Let’s Go!</span>
+            </div>
           </div>
-          <div className="pl-4">
-            <h2 className="text-base font-medium">Going where?</h2>
-            <p className="text-xs text-gray-500 font-normal flex items-center  gap-x-1">
-              <span>Destination</span> • <span>Type</span> • <span>Lessgo</span>
-            </p>
-          </div>
-        </div>
+        {/* </div> */}
 
         <div className="py-2 pr-2 flex items-center">
-          <div className="bg-[#ff612c] rounded-full w-[40px] h-[40px] flex justify-center items-center md:hidden">
-            <FiSearch className="text-lg text-white"></FiSearch>
+          <div className="bg-white border rounded-full w-[40px] h-[40px] flex justify-center items-center md:hidden">
+            <VscSettings className="text-lg"></VscSettings>
           </div>
         </div>
       </div>

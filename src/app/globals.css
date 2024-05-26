@@ -34,8 +34,18 @@ body {
 } */
 
 @font-face {
-  font-family: "gte-regular";
+  font-family: "geist-regular";
   src: url("/fonts/GTEestiProDisplay-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "geist-light";
+  src: url("/fonts/GTEestiProDisplay-Light.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "geist-";
+  src: url("/fonts/GTEestiProDisplay-Bold.ttf");
   font-display: swap;
 }
 @font-face {
@@ -44,7 +54,7 @@ body {
   font-display: swap;
 }
 * {
-  font-family:DM_Sans, sans-serif;
+  font-family:geist-regular, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -55,10 +65,10 @@ body {
   appearance: none;
   display: none;
 }
-.gte_regular{
-  font-family: gte-regular;
+.GTE_regular{
+  font-family: geist-regular;
 }
-/* .GTE_light {
+.GTE_light {
   font-family: geist-light !important;
 }
 .GTE_medium {
@@ -67,7 +77,3 @@ body {
 .GTE_bold {
   font-family: geist-bold !important;
 }
-*/
-/* .GTE_regular {
-  font-family: "DM Sans", sans-serif !important;
-}  */
