@@ -23,7 +23,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     // },
     {
       icon: <FaPlaneDeparture className="text-gray-600 md:text-lg"></FaPlaneDeparture>,
-      name: "Tours & Activities",
+      name: "Tours",
       link:"/home/tours"
     },
     {
@@ -33,7 +33,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     },
     {
       icon: <FaHotel className="text-gray-600 md:text-lg"></FaHotel>,
-      name: "Attraction Passes",
+      name: "Attractions",
       link:"/home/attraction"
     },
     {
@@ -54,7 +54,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
   ]);
   return (
     <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto pl-2 md:px-4 flex items-center sticky top-[50px] z-[100] select-none bg-white pr-2 mt-2">
-      <div className="flex justify-start items-center gap-x-2 px-2">
+      <div className="flex justify-start items-center gap-x-2 px-2 pr-4">
         {allTags?.map((tag) => {
           const isActive = pathname === tag.link;
           return (
@@ -71,12 +71,6 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
           );
         })}
 
-        <button
-          // href={"/home/hotels"}
-          className={`mx-1 text-gray-900 px-3 py-1 flex justify-center items-stretch gap-x-2 text-sm font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-gray-200 rounded-lg`}
-        >
-          <MdMoreHoriz className="md:text-lg"></MdMoreHoriz>
-        </button>
         {/* <Link
           href={"/home/packages"}
           className={`px-2 mx-1 py-1 flex flex-col gap-y-1 justify-center items-center gap-x-2  text-gray-900 text-sm font-medium hhover:bg-gray-100 rounded-none min-w-fit cursor-pointer${
