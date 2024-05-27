@@ -35,7 +35,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       ),
       name: "Outdoor",
       link: "/home/outdoor",
-      iconImg: "/icons/outdoors.jpeg",
+      iconImg: "/icons/outdoors.png",
     },
     {
       icon: (
@@ -77,13 +77,13 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={!isActive ? tag.link : "/home"}
-              className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
+              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
                 isActive && "bg-gray-200"
               }`}
             >
               {/* {tag.icon} */}
               <img src={tag.iconImg} alt="" className="h-[25px]" />
-              <span>{tag.name}</span>
+              <span className="mt-2">{tag.name}</span>
             </Link>
           );
         })}

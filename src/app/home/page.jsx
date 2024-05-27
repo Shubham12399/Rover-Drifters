@@ -18,7 +18,7 @@ import { PiHeartLight } from "react-icons/pi";
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
-    <div className="w-full pb-14 mt-4 bg-[#f9f9f9]">
+    <div className="w-full pb-14 mt-4 ">
       <div className="w-full max-w-maxWidthContent mx-auto ">
         <h1 className="text-lg font-medium mb-1 px-4">Top Destinations</h1>
         <div className="mt-2 mb-6 flex gap-x-4 overflow-auto hide-scrollbar px-4">
@@ -186,7 +186,7 @@ export default Home;
 const DestinationCard = () => {
   return (
     <div
-      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none"
+      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none border"
       style={{ boxShadow: "var(--cardShadow)" }}
     >
       <img
