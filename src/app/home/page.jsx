@@ -1,26 +1,37 @@
-"use client"
+"use client";
 
-import BottomBar from '@/components/BottomBar';
-import Carousel from '@/components/Carousel/Carousel';
-import CarouselWithNavigate from '@/components/CarouselWithNavigate';
-import DefaultHome from '@/components/HomePage/DefaultHome';
-import TabsAndPlanTours from '@/components/HomePage/TabsAndPlanTours';
-import TravelsFirstChoice from '@/components/HomePage/TravelsFavChoice';
-import WhereTo from '@/components/HomePage/WhereTo';
+import BottomBar from "@/components/BottomBar";
+import Carousel from "@/components/Carousel/Carousel";
+import CarouselWithNavigate from "@/components/CarouselWithNavigate";
+import DefaultHome from "@/components/HomePage/DefaultHome";
+import TabsAndPlanTours from "@/components/HomePage/TabsAndPlanTours";
+import TravelsFirstChoice from "@/components/HomePage/TravelsFavChoice";
+import WhereTo from "@/components/HomePage/WhereTo";
 // import { Carousel } from '@material-tailwind/react';
-import React from 'react'
-
+import React from "react";
+import { FaLocationArrow } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
+import { FiHeart } from "react-icons/fi";
+import { GoLocation } from "react-icons/go";
 
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
-    <div className="w-full pb-14 mt-4">
-    {/* ------------------------------Header section ----------------------------------------------------- */}
-    {/* <SearchBar></SearchBar> */}
- 
-    <TravelsFirstChoice></TravelsFirstChoice>
-    <div className="w-full max-w-maxWidthContent mx-auto px-4">
-        <h1 className="text-lg font-medium mb-3">Top destinations</h1>
+    <div className="w-full pb-14 mt-4 bg-[#f9f9f9]">
+      <div className="w-full max-w-maxWidthContent mx-auto px-4">
+        <h1 className="text-lg font-medium mb-1">Top destinations</h1>
+        <div className="mt-2 mb-6 flex gap-x-4  overflow-auto hide-scrollbar">
+          <DestinationCard></DestinationCard>
+          <DestinationCard></DestinationCard>
+          <DestinationCard></DestinationCard>
+          <DestinationCard></DestinationCard>
+          <DestinationCard></DestinationCard>
+        </div>
+      </div>
+      <TravelsFirstChoice></TravelsFirstChoice>
+
+      <div className="w-full max-w-maxWidthContent mx-auto px-4">
+        <h1 className="text-lg font-medium mb-3">Top Attractions</h1>
         <CarouselWithNavigate>
           <swiper-slide key={0} class="px-1 ">
             <div className="min-w-full h-[170px] rounded-md bg-gray-200">
@@ -89,7 +100,7 @@ const Home = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+            <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
               <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
@@ -109,7 +120,7 @@ const Home = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+            <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
               <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
@@ -129,7 +140,7 @@ const Home = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+            <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
               <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
@@ -149,7 +160,7 @@ const Home = () => {
               alt=""
               className="h-full w-full object-cover rounded-lg"
             />
-             <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
+            <div className="w-full overflow-auto hide-scrollbar absolute bottom-2 left-1 z-20">
               <div className="flex items-start gap-x-1 px-4 hide-scrollbar overflow-auto ">
                 <div className="text-xs px-1 rounded-md text-white border">
                   Adventure
@@ -163,42 +174,34 @@ const Home = () => {
               </div>
             </div>
           </div>
-        
         </div>
       </div>
-    {
-        //{ /* {/*action center*/}
-        //<div>
-        //  {/* Heading Title Show on Desktop */}
-        //  <h1 className="text-center text-lg md:text-2xl font-medium pt-4 md:pt-10 hidden md:block ">
-        // Enjoy the, Dream Place Now!
-        //  </h1>
-        //</main> {/* Paragraph Show on Desktop */}
-        //   <p className="max-w-maxContentTab text-[10px] px-4 md:px-0 md:text-sm text-richblack-300 text-center mx-auto hidden md:block ">
-        // Let&apos;s checkout the latest Tourism Places. To book a ticket fill
-        // some boxes{" "}
-        //  </p>
-        //  {/* Action center Show on Desktop */}
-        //  <div className="mt-4 relative">
-        //  <Suspense fallback="">
-        //    <HomeHeroImages></HomeHeroImages>
-        //  </Suspense>
-        //  <Suspense fallback="">
-        //    <HomePageSelection></HomePageSelection>
-        //  </Suspense>
-        //  </div>
-        //  </div>
-        //  {/* All Sections  */}
-        //  <Suspense>
-        //    <ChooseDestination></ChooseDestination>
-        //  </Suspense>
-        //  <Suspense fallback="">
-        //    <TypesToursSec></TypesToursSec>
-        //  </Suspense>
-    }
-
-</div>
-  )
-}
+    </div>
+  );
+};
 
 export default Home;
+
+const DestinationCard = () => {
+  return (
+    <div className="bg-white rounded-2xl p-2 min-w-[130px] w-[130px] max-w-[120px] select-none" 
+    style={{ boxShadow: "var(--cardShadow)" }}
+    >
+      <img
+        src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        className="w-full h-[116px] rounded-xl select-none"
+        style={{ boxShadow: "var(--softShadow)" }}
+      />
+      <div className="flex pl-2 pt-3 pb-1 items-center justify-between">
+        <div>
+          <h2 className="text-xs GTE_medium text-gray-900">Banjir Kanal</h2>
+          <p className="text-xs GTE_light text-gray-400 flex gap-x-1 py-1 GTE_regular"> <HiLocationMarker className="text-sm text-[#ff612c]"></HiLocationMarker>South Asia</p>
+        </div>
+        <div className="w-[22px] h-[22px] p-1 mt-1 bg-white flex items-center justify-center rounded-full" style={{ boxShadow: "0 0 8px rgba(0,0,0,0.09)" }}>
+          <FiHeart></FiHeart>
+        </div>
+      </div>
+    </div>
+  );
+};

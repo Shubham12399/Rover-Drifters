@@ -32,7 +32,10 @@ body {
     text-wrap: balance;
   }
 } */
-
+:root{
+  --softShadow:rgba(0, 0, 0, 0.25) 0px 10px 20px;
+  --cardShadow:0 0 8px rgba(0,0,0,0.035);
+}
 @font-face {
   font-family: "geist-regular";
   src: url("/fonts/GTEestiProDisplay-Regular.ttf");
@@ -44,14 +47,17 @@ body {
   font-display: swap;
 }
 @font-face {
-  font-family: "geist-";
-  src: url("/fonts/GTEestiProDisplay-Bold.ttf");
+  font-family: "geist-medium";
+  src: url("/fonts/GTEestiProDisplay-Medium.ttf");
   font-display: swap;
 }
 @font-face {
   font-family: "DM_sans";
   src: url("/fonts/DM_sans.ttf");
   font-display: swap;
+}
+body{
+  background-color: #f9f9f9;
 }
 * {
   font-family:geist-regular, sans-serif;
