@@ -13,13 +13,14 @@ import { FaLocationArrow } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { FiHeart } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
+import { PiHeartLight } from "react-icons/pi";
 
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
     <div className="w-full pb-14 mt-4 bg-[#f9f9f9]">
       <div className="w-full max-w-maxWidthContent mx-auto px-4">
-        <h1 className="text-lg font-medium mb-1">Top destinations</h1>
+        <h1 className="text-lg font-medium mb-1">Top Destinations</h1>
         <div className="mt-2 mb-6 flex gap-x-4  overflow-auto hide-scrollbar">
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
@@ -184,22 +185,32 @@ export default Home;
 
 const DestinationCard = () => {
   return (
-    <div className="bg-white rounded-2xl p-2 min-w-[130px] w-[130px] max-w-[120px] select-none" 
-    style={{ boxShadow: "var(--cardShadow)" }}
+    <div
+      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none"
+      style={{ boxShadow: "var(--cardShadow)" }}
     >
       <img
         src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className="w-full h-[116px] rounded-xl select-none"
+        className="w-full h-[146px] rounded-xl select-none object-cover"
         style={{ boxShadow: "var(--softShadow)" }}
       />
-      <div className="flex pl-2 pt-3 pb-1 items-center justify-between">
+      <div className="flex pl-2 pr-1 pb-1 !items-center justify-between mt-3">
         <div>
-          <h2 className="text-xs GTE_medium text-gray-900">Banjir Kanal</h2>
-          <p className="text-xs GTE_light text-gray-400 flex gap-x-1 py-1 GTE_regular"> <HiLocationMarker className="text-sm text-[#ff612c]"></HiLocationMarker>South Asia</p>
+          <h2 className="text-sm GTE_regular text-gray-900">Banjir Kanal</h2>
+          <p className="text-xs GTE_light text-gray-400 flex items-baseline gap-x-1 mt-1 GTE_regular">
+            {" "}
+            <HiLocationMarker className="text-xs text-[#ff612c]"></HiLocationMarker>
+            South Asia
+          </p>
         </div>
-        <div className="w-[22px] h-[22px] p-1 mt-1 bg-white flex items-center justify-center rounded-full" style={{ boxShadow: "0 0 8px rgba(0,0,0,0.09)" }}>
-          <FiHeart></FiHeart>
+        <div>
+          <div
+            className="w-[22px] h-[22px] p-1 bg-white flex items-center justify-center rounded-full"
+            style={{ boxShadow: "0px 0 4px rgba(0,0,0,0.1)" }}
+          >
+            <PiHeartLight className="text-[#ff612c]"></PiHeartLight>
+          </div>
         </div>
       </div>
     </div>
