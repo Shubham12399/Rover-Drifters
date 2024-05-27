@@ -22,34 +22,50 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     //   link:"/home"
     // },
     {
-      icon: <FaPlaneDeparture className="text-gray-600 md:text-lg group-hover:text-white"></FaPlaneDeparture>,
+      icon: (
+        <FaPlaneDeparture className="text-gray-600 md:text-lg group-hover:text-white"></FaPlaneDeparture>
+      ),
       name: "Tours",
-      link:"/home/trips"
+      link: "/home/trips",
+      iconImg: "/icons/tours.png",
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
       name: "Outdoor",
-      link:"/home/outdoor"
+      link: "/home/outdoor",
+      iconImg: "/icons/outdoors.jpeg",
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
-      name: "Attractions",
-      link:"/home/attraction"
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
+      name: "hotels",
+      link: "/home/attraction",
+      iconImg: "/icons/stays.png",
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
       name: "Transport",
-      link:"/home/transport "
+      link: "/home/transport",
+      iconImg: "/icons/transport.png",
     },
     {
-      icon: <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>,
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
       name: "Food & Relaxation",
-      link:"/home/food-relaxatation"
+      link: "/home/food-relaxatation",
+      iconImg: "/icons/foods.png",
     },
     {
       icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
       name: "Packages",
-      link:"/home/packages"
+      link: "/home/packages",
+      iconImg: "/icons/packages.png",
     },
   ]);
   return (
@@ -60,12 +76,13 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
           return (
             <Link
               key={tag.name}
-              href={!isActive ? tag.link  : "/home"}
-               className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
+              href={!isActive ? tag.link : "/home"}
+              className={`px-3 py-1 flex justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
                 isActive && "bg-gray-200"
               }`}
             >
-              {tag.icon}
+              {/* {tag.icon} */}
+              <img src={tag.iconImg} alt="" className="h-[25px]" />
               <span>{tag.name}</span>
             </Link>
           );
