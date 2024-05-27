@@ -78,7 +78,7 @@ const CarouselWithNavigate = ({ children }) => {
     }
   },[]);
   return (
-    <div className="relative h-[180px] overflow-hidden max-w-maxContent mx-auto">
+    <div className="relative h-[180px] overflow-hidden max-w-maxContent mx-auto px-4">
       <swiper-container
         ref={swiperRef}
         slides-per-view={slideView}

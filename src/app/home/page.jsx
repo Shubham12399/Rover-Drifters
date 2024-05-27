@@ -19,9 +19,9 @@ const Home = () => {
   // console.log(window?.innerWidth)
   return (
     <div className="w-full pb-14 mt-4 bg-[#f9f9f9]">
-      <div className="w-full max-w-maxWidthContent mx-auto px-4">
-        <h1 className="text-lg font-medium mb-1">Top Destinations</h1>
-        <div className="mt-2 mb-6 flex gap-x-4  overflow-auto hide-scrollbar">
+      <div className="w-full max-w-maxWidthContent mx-auto ">
+        <h1 className="text-lg font-medium mb-1 px-4">Top Destinations</h1>
+        <div className="mt-2 mb-6 flex gap-x-4 overflow-auto hide-scrollbar px-4">
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
@@ -31,8 +31,8 @@ const Home = () => {
       </div>
       <TravelsFirstChoice></TravelsFirstChoice>
 
-      <div className="w-full max-w-maxWidthContent mx-auto px-4">
-        <h1 className="text-lg font-medium mb-3">Top Attractions</h1>
+      <div className="w-full max-w-maxWidthContent mx-auto ">
+        <h1 className="text-lg font-medium mb-3 px-4">Top Attractions</h1>
         <CarouselWithNavigate>
           <swiper-slide key={0} class="px-1 ">
             <div className="min-w-full h-[170px] rounded-md bg-gray-200">
@@ -72,9 +72,9 @@ const Home = () => {
           </swiper-slide>
         </CarouselWithNavigate>
       </div>
-      <div className="w-full max-w-maxWidthContent mx-auto px-4 mt-4">
-        <h1 className="text-lg font-medium mb-3">Best Trips</h1>
-        <div className="flex gap-x-2 px-1 overflow-auto hide-scrollbar">
+      <div className="w-full max-w-maxWidthContent mx-auto mt-4">
+        <h1 className="text-lg font-medium mb-3 px-4 ">Best Trips</h1>
+        <div className="flex gap-x-2 overflow-auto hide-scrollbar px-5 ">
           <div className="min-w-[45%] md:min-w-[20%] md:max-w-[20%] transition-all hover:min-w-[60%] md:hover:min-w-[30%] bg-red-300 rounded-lg h-[170px] flex flex-col justify-end relative overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -198,11 +198,10 @@ const DestinationCard = () => {
       <div className="flex pl-2 pr-1 pb-1 !items-center justify-between mt-3">
         <div>
           <h2 className="text-sm GTE_regular text-gray-900">Banjir Kanal</h2>
-          <p className="text-xs GTE_light text-gray-400 flex items-baseline gap-x-1 mt-1 GTE_regular">
-            {" "}
+          <div className="text-xs GTE_light text-gray-400 flex items-center gap-x-1 mt-1 GTE_regular">
             <HiLocationMarker className="text-xs text-[#ff612c]"></HiLocationMarker>
-            South Asia
-          </p>
+            <p className="mt-[2px]"> South Asia</p>
+          </div>
         </div>
         <div>
           <div
