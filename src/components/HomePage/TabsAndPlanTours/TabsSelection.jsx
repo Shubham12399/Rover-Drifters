@@ -73,7 +73,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       ),
       name: "Transport",
       link: "/home/transport",
-      iconImg: "/icons/transport.jpg",
+      iconImg: "/icons/transport.png",
     },
    
   ]);
@@ -91,20 +91,20 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
               }`}
             >
               {/* {tag.icon} */}
-              <div className="rounded-lg bg-white p-2 "
+              <div className={"rounded-2xl bg-[rgba(0,_0,_0,_0.04)] min-w-[50px] flex justify-center items-center min-h-[50px] p-2 border-2 border-transparent"}
                 style={{
-                  boxShadow: "0 0 20px rgba(0,0,0,0.06)",
+                  // boxShadow: "0 0 20px rgba(0,0,0,0.06)",
                   // border:"1px solid rgba(0,0,0,0.09)"
                 }}
               >
                 <img
                   src={tag.iconImg}
                   alt=""
-                  className="h-[25px] "
+                  className="h-[30px]"
                 />
               </div>
 
-              <span className="mt-2">{tag.name}</span>
+              <span className="mt-2 GTE_light text-gray-500">{tag.name}</span>
             </Link>
           );
         })}
