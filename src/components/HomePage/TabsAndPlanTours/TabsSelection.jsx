@@ -41,9 +41,31 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       icon: (
         <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
       ),
+      name: "Attractions",
+      link: "/home/attraction",
+      iconImg: "/icons/tickets.png",
+    },
+    {
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
       name: "hotels",
       link: "/home/attraction",
       iconImg: "/icons/stays.png",
+    },{
+      icon: (
+        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
+      ),
+      name: "Food & Leisure",
+      link: "/home/food-relaxatation",
+      iconImg: "/icons/foods.png",
+    },
+     
+    {
+      icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
+      name: "Packages",
+      link: "/home/packages",
+      iconImg: "/icons/packages.png",
     },
     {
       icon: (
@@ -51,22 +73,9 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       ),
       name: "Transport",
       link: "/home/transport",
-      iconImg: "/icons/transport.png",
+      iconImg: "/icons/transport.jpg",
     },
-    {
-      icon: (
-        <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
-      ),
-      name: "Food & Relaxation",
-      link: "/home/food-relaxatation",
-      iconImg: "/icons/foods.png",
-    },
-    {
-      icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
-      name: "Packages",
-      link: "/home/packages",
-      iconImg: "/icons/packages.png",
-    },
+   
   ]);
   return (
     <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar px-4 py-3 md:px-4 flex items-center sticky top-[50px] z-[100] select-none mt-2">
@@ -77,16 +86,24 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={!isActive ? tag.link : "/home"}
-              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer group rounded-lg bg-white border ${
+              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium hover:bg-gray-100 min-w-fit cursor-pointer group ${
                 isActive && "border-2 border-[#ff612c]"
               }`}
-              style={{
-                boxShadow:"0 0 20px rgba(0,0,0,0.09)",
-                border:"1px solid rgba(0,0,0,0.09)"
-              }}
             >
               {/* {tag.icon} */}
-              <img src={tag.iconImg} alt="" className="h-[25px]" />
+              <div className="rounded-lg bg-white p-2 "
+                style={{
+                  boxShadow: "0 0 20px rgba(0,0,0,0.06)",
+                  // border:"1px solid rgba(0,0,0,0.09)"
+                }}
+              >
+                <img
+                  src={tag.iconImg}
+                  alt=""
+                  className="h-[25px] "
+                />
+              </div>
+
               <span className="mt-2">{tag.name}</span>
             </Link>
           );
