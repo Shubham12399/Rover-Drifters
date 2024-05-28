@@ -78,7 +78,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
    
   ]);
   return (
-    <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar px-4 py-3 md:px-4 flex items-center sticky top-[50px] z-[100] select-none mt-2">
+    <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar px-4 py-1 md:px-4 flex items-center sticky top-[50px] z-[100] select-none mt-2">
       <div className="flex justify-start items-center gap-x-2 pr-4">
         {allTags?.map((tag) => {
           const isActive = pathname === tag.link;
@@ -86,7 +86,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={!isActive ? tag.link : "/home"}
-              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium hover:bg-gray-100 min-w-fit cursor-pointer group ${
+              className={`px-3 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium hover:bg-gray-100 min-w-fit cursor-pointer group ${
                 isActive && "border-2 border-[#ff612c]"
               }`}
             >
