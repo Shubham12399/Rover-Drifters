@@ -18,7 +18,7 @@ import { PiHeartLight } from "react-icons/pi";
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
-    <div className="w-full pb-14 mt-4 ">
+    <div className="w-full pb-14 mt-2">
       <div className="w-full max-w-maxWidthContent mx-auto ">
         <h1 className="text-lg font-medium mb-1 px-4">Top Destinations</h1>
         <div className="mt-2 mb-6 flex gap-x-4 overflow-auto hide-scrollbar px-4">

@@ -33,7 +33,7 @@ body {
   }
 } */
 :root{
-  --softShadow:rgba(0, 0, 0, 0.25) 0px 10px 20px;
+  --softShadow:rgba(0, 0, 0, 0.2) 0px 10px 12px;
   --cardShadow:0 0 8px rgba(0,0,0,0.035);
 }
 @font-face {

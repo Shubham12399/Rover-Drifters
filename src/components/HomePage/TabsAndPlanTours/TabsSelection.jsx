@@ -69,7 +69,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
     },
   ]);
   return (
-    <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar pl-2 md:px-4 flex items-center sticky top-[50px] z-[100] select-none pr-2 mt-2">
+    <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar px-4 py-3 md:px-4 flex items-center sticky top-[50px] z-[100] select-none mt-2">
       <div className="flex justify-start items-center gap-x-2 pr-4">
         {allTags?.map((tag) => {
           const isActive = pathname === tag.link;
@@ -77,9 +77,13 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={!isActive ? tag.link : "/home"}
-              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer hover:bg-[#ff612c] group hover:text-white rounded-lg ${
-                isActive && "bg-gray-200"
+              className={`px-3 py-1 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm  font-medium hhover:bg-gray-100 min-w-fit cursor-pointer group rounded-lg bg-white border ${
+                isActive && "border-2 border-[#ff612c]"
               }`}
+              style={{
+                boxShadow:"0 0 20px rgba(0,0,0,0.09)",
+                border:"1px solid rgba(0,0,0,0.09)"
+              }}
             >
               {/* {tag.icon} */}
               <img src={tag.iconImg} alt="" className="h-[25px]" />
