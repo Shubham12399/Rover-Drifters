@@ -52,10 +52,10 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       icon: (
         <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
       ),
-      name: "hotels",
+      name: "Stays",
       link: "/home/attraction",
       iconImg: "/icons/stays.png",
-      shadow: "rgba(184, 243, 243, 0)",
+      shadow: "rgba(0,0,0,0.15)",
     },
     {
       icon: (
@@ -119,7 +119,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
                 />
               </div>
 
-              <span className="mt-2 GTE_light text-gray-600">{tag.name}</span>
+              <span className="mt-2 GTE_light text-gray-600 text-xs">{tag.name}</span>
             </Link>
           );
         })}

@@ -32,9 +32,9 @@ body {
     text-wrap: balance;
   }
 } */
-:root{
-  --softShadow:rgba(0, 0, 0, 0.2) 0px 10px 12px;
-  --cardShadow:0 0 8px rgba(0,0,0,0.035);
+:root {
+  --softShadow: rgba(0, 0, 0, 0.2) 0px 10px 12px;
+  --cardShadow: 0 0 8px rgba(0, 0, 0, 0.035);
 }
 @font-face {
   font-family: "geist-regular";
@@ -56,22 +56,22 @@ body {
   src: url("/fonts/DM_sans.ttf");
   font-display: swap;
 }
-body{
+body {
   /* background-color: #f9f9f9; */
 }
 * {
-  font-family:geist-regular, sans-serif;
+  font-family: geist-regular, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   margin: 0;
   padding: 0;
 }
-.hide-scrollbar::-webkit-scrollbar{
+.hide-scrollbar::-webkit-scrollbar {
   appearance: none;
   display: none;
 }
-.GTE_regular{
+.GTE_regular {
   font-family: geist-regular;
   /* filter: drop-shadow(); */
 }
@@ -83,4 +83,14 @@ body{
 }
 .GTE_bold {
   font-family: geist-bold !important;
+}
+.trend_posts_shadow {
+  --color: rgba(0, 0, 0, 0.2);
+  --blur: 5px;
+  --tpx: 0px;
+  --rpx: 0px;
+  --bpx: 0px;
+  --lpx: 0px;
+  box-shadow: 0 0 var(--blur) var(--color); /* note 0 offset values */
+  clip-path: inset(var(--tpx) var(--rpx) var(--bpx) var(--lpx));
 }
