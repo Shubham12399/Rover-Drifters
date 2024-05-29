@@ -93,7 +93,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
             <Link
               key={tag.name}
               href={!isActive ? tag.link : "/home"}
-              className={`px-3 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium hover:bg-gray-100 min-w-fit cursor-pointer group ${
+              className={`px-3 flex flex-col justify-center items-center gap-x-2 border-b-2 border-transparent text-gray-900 text-sm font-medium min-w-fit cursor-pointer group ${
                 isActive && "border-2 border-[#ff612c]"
               }`}
             >
@@ -119,7 +119,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
                 />
               </div>
 
-              <span className="mt-2 GTE_light text-gray-600 text-xs">{tag.name}</span>
+              <span className="mt-2 GTE_light text-gray-800 text-xs">{tag.name}</span>
             </Link>
           );
         })}
