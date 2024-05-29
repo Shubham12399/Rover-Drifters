@@ -108,7 +108,7 @@ body {
   transform: translateX(-50%);
   width: 90%;
   height: 10px;
-  background: rgba(0, 0, 0, 01); /* Adjust the shadow color and transparency */
+  background: rgba(0, 0, 0, 0.8); /* Adjust the shadow color and transparency */
   border-radius: 50%;
   filter: blur(10px); /* Adjust the blur effect */
   z-index: 1; /* Ensure shadow appears behind the image */
