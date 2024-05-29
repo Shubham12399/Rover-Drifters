@@ -189,19 +189,19 @@ const DestinationCard = () => {
       className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none border"
       style={{ boxShadow: "var(--cardShadow)" }}
     >
-      <div className=" rounded-xl !overflow-hidden trend_posts_shadow"  style={{
+      {/* <div className=" rounded-xl overflow-hidden trend_posts_shadow"  style={{
           "--tpx":"8px",
           "--color":"rgba(0,0,0,0.8)"
-        }}>
+        }}> */}
 
       <img
         src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
         className="w-full h-[146px] select-none object-cover"
-        // style={{ boxShadow: "var(--softShadow)" }}
+        style={{ boxShadow: "var(--softShadow)" }}
        
       />
-      </div>
+      {/* </div> */}
 
       <div className="flex pl-2 pr-1 pb-1 !items-center justify-between mt-3">
         <div>
