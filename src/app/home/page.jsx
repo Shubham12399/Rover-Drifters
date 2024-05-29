@@ -18,10 +18,10 @@ import { PiHeartLight } from "react-icons/pi";
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
-    <div className="w-full pb-14 mt-2">
-      <div className="w-full max-w-maxWidthContent mx-auto ">
-        <h1 className="text-lg font-medium mb-1 px-4">Top Destinations</h1>
-        <div className="mt-2 mb-6 flex gap-x-4 overflow-auto hide-scrollbar px-4">
+    <div className="w-full pb-14 mt-3">
+      <div className="w-full max-w-maxWidthContent mx-auto">
+        <h1 className="text-lg font-medium px-4">Top Destinations</h1>
+        <div className="pb-6 flex gap-x-4 overflow-auto hide-scrollbar py-2 pt-3 px-4">
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
@@ -186,22 +186,23 @@ export default Home;
 const DestinationCard = () => {
   return (
     <div
-      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none border"
+      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none"
       style={{ boxShadow: "var(--cardShadow)" }}
     >
-      {/* <div className=" rounded-xl overflow-hidden trend_posts_shadow"  style={{
-          "--tpx":"8px",
-          "--color":"rgba(0,0,0,0.8)"
-        }}> */}
+      <div className="rounded-xl trend_posts_shadow">
 
       <img
         src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className="w-full h-[146px] select-none object-cover rounded-lg"
-        style={{ boxShadow: "var(--softShadow)" }}
+        className="w-full h-[146px] select-none object-cover rounded-xl relative z-50"
+        // style={{ boxShadow: "0 0 8px rgba(0,0,0,0.9)",
+        // clipPath:"inset(0 0 -8px 0)"
+
+        // }}
+        // style={{ boxShadow: "var(--softShadow)" }}
        
       />
-      {/* </div> */}
+      </div>
 
       <div className="flex pl-2 pr-1 pb-1 !items-center justify-between mt-3">
         <div>
@@ -214,9 +215,12 @@ const DestinationCard = () => {
         <div>
           <div
             className="w-[22px] h-[22px] p-1 bg-white flex items-center justify-center rounded-full"
-            style={{ boxShadow: "0px 0 4px rgba(0,0,0,0.1)" }}
+            // style={{ boxShadow: "0px 0 4px rgba(0,0,0,0.1)" }}
+            style={{
+              boxShadow:"-2px 4px 4px rgba(255, 97, 44, 0.2)"
+            }}
           >
-            <PiHeartLight className="text-[#ff612c]"></PiHeartLight>
+            <PiHeartLight className="text-[#ff612c]" ></PiHeartLight>
           </div>
         </div>
       </div>

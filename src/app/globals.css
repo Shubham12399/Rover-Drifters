@@ -34,7 +34,7 @@ body {
 } */
 :root {
   --softShadow: rgba(0, 0, 0, 0.2) 0px 10px 12px;
-  --cardShadow: 0 0 8px rgba(0, 0, 0, 0.035);
+  --cardShadow: 0 0 12px 1px rgba(0, 0, 0, 0.05);
 }
 @font-face {
   font-family: "geist-regular";
@@ -84,7 +84,7 @@ body {
 .GTE_bold {
   font-family: geist-bold !important;
 }
-.trend_posts_shadow {
+/* .trend_posts_shadow {
   --color: rgba(0, 0, 0, 0.2);
   --blur: 5px;
   --tpx: 0px;
@@ -92,5 +92,24 @@ body {
   --bpx: 0px;
   --lpx: 0px;
   box-shadow: 0 0 var(--blur) var(--color); /* note 0 offset values */
-  clip-path: inset(var(--tpx) var(--rpx) var(--bpx) var(--lpx));
+  /* clip-path: inset(var(--tpx) var(--rpx) var(--bpx) var(--lpx)); */
+/* } */
+.trend_posts_shadow {
+  position: relative;
+  display:block;
+}
+
+.trend_posts_shadow::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -2px; /* Adjust the offset to position shadow properly */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 10px;
+  background: rgba(0, 0, 0, 01); /* Adjust the shadow color and transparency */
+  border-radius: 50%;
+  filter: blur(10px); /* Adjust the blur effect */
+  z-index: 1; /* Ensure shadow appears behind the image */
 }
