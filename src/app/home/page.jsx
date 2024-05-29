@@ -186,15 +186,15 @@ export default Home;
 const DestinationCard = () => {
   return (
     <div
-      className="bg-white rounded-2xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none"
+      className="bg-white rounded-3xl p-2 min-w-[160px] w-[160px] max-w-[160px] select-none"
       style={{ boxShadow: "var(--cardShadow)" }}
     >
-      <div className="rounded-xl trend_posts_shadow">
+      <div className="rounded-2xl trend_posts_shadow">
 
       <img
         src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className="w-full h-[146px] select-none object-cover rounded-xl relative z-50"
+        className="w-full h-[146px] select-none object-cover rounded-2xl relative z-50"
         // style={{ boxShadow: "0 0 8px rgba(0,0,0,0.9)",
         // clipPath:"inset(0 0 -8px 0)"
 
@@ -214,7 +214,7 @@ const DestinationCard = () => {
         </div>
         <div>
           <div
-            className="w-[22px] h-[22px] p-1 bg-white flex items-center justify-center rounded-full"
+            className="w-[22px] h-[22px] p-1 bg-white flex items-center justify-center rounded-full cursor-pointer"
             // style={{ boxShadow: "0px 0 4px rgba(0,0,0,0.1)" }}
             style={{
               boxShadow:"-2px 4px 4px rgba(255, 97, 44, 0.2)"
