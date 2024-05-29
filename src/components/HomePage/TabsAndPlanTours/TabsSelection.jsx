@@ -28,6 +28,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       name: "Tours",
       link: "/home/trips",
       iconImg: "/icons/tours.png",
+      shadow: "rgba(244, 210, 160, 0.6)",
     },
     {
       icon: (
@@ -36,6 +37,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       name: "Outdoor",
       link: "/home/outdoor",
       iconImg: "/icons/outdoors.png",
+      shadow: "rgba(184, 243, 243, 0.8)",
     },
     {
       icon: (
@@ -44,6 +46,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       name: "Attractions",
       link: "/home/attraction",
       iconImg: "/icons/tickets.png",
+      shadow: "rgba(125, 154, 200, 0.5)",
     },
     {
       icon: (
@@ -52,20 +55,24 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       name: "hotels",
       link: "/home/attraction",
       iconImg: "/icons/stays.png",
-    },{
+      shadow: "rgba(184, 243, 243, 0)",
+    },
+    {
       icon: (
         <FaHotel className="text-gray-600 md:text-lg group-hover:text-white"></FaHotel>
       ),
       name: "Food & Leisure",
       link: "/home/food-relaxatation",
       iconImg: "/icons/foods.png",
+      shadow: "rgba(182, 106, 98, 0.3)",
     },
-     
+
     {
       icon: <GoPackage className="text-gray-600 md:text-lg"></GoPackage>,
       name: "Packages",
       link: "/home/packages",
       iconImg: "/icons/packages.png",
+      shadow: "rgba(79, 138, 192, 0.3)",
     },
     {
       icon: (
@@ -74,6 +81,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       name: "Transport",
       link: "/home/transport",
       iconImg: "/icons/transport.png",
+      shadow: "rgba(170, 174, 178, 0.5)",
     },
   ]);
   return (
@@ -90,16 +98,24 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
               }`}
             >
               {/* {tag.icon} */}
-              <div className={"rounded-2xl bg-[rgba(0,_0,_0,_0.04)] min-w-[50px] flex justify-center items-center min-h-[50px] p-2 border-2 border-transparent"}
-                style={{
-                  // boxShadow: "0 0 20px rgba(0,0,0,0.06)",
-                  // border:"1px solid rgba(0,0,0,0.09)"
-                }}
+              <div
+                className={
+                  "rounded-2xl bg-[rgba(0,_0,_0,_0.04)] min-w-[50px] flex justify-center items-center min-h-[50px] p-2 border-2 border-transparent"
+                }
+                style={
+                  {
+                    // boxShadow: "0 0 20px rgba(0,0,0,0.06)",
+                    // border:"1px solid rgba(0,0,0,0.09)"
+                  }
+                }
               >
                 <img
                   src={tag.iconImg}
                   alt=""
-                  className="h-[30px]"
+                  className={`h-[30px]`}
+                  style={{
+                    filter:`drop-shadow(0 3px 2px ${tag.shadow})`
+                  }}
                 />
               </div>
 

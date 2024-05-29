@@ -73,6 +73,7 @@ body{
 }
 .GTE_regular{
   font-family: geist-regular;
+  /* filter: drop-shadow(); */
 }
 .GTE_light {
   font-family: geist-light !important;
