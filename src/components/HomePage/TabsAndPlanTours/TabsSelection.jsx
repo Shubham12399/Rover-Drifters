@@ -75,7 +75,6 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
       link: "/home/transport",
       iconImg: "/icons/transport.png",
     },
-   
   ]);
   return (
     <div className="w-full max-w-maxWidthContent mx-auto border-bl border-gray-200 overflow-auto hide-scrollbar px-4 py-1 md:px-4 flex items-center sticky top-[50px] z-[100] select-none mt-2">
@@ -104,7 +103,7 @@ const TabsSelection = ({ setIsOpen, isOpen }) => {
                 />
               </div>
 
-              <span className="mt-2 GTE_light text-gray-500">{tag.name}</span>
+              <span className="mt-2 GTE_light text-gray-600">{tag.name}</span>
             </Link>
           );
         })}
