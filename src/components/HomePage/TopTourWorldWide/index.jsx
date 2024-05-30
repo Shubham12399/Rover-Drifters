@@ -7,7 +7,7 @@ const TopTourWorldWide = () => {
     <div className="w-full max-w-maxWidthContent mx-auto px-4">
       <div className="rounded-3xl bg-gradient-to-b from-orange-50 via-transparent to-transparent py-4">
 
-      <h1 className="text-lg px-4">Things to Do Worldwide</h1>
+      <h1 className="text-lg px-4">Top Things to Do Worldwide</h1>
       <div>
         <div className="flex gap-x-2 py-2 px-4 items-center">
           <div className="min-w-fit w-fit px-2 py-2 text-[12px] md:text-sm text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-2">
