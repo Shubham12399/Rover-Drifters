@@ -3,10 +3,10 @@ import { FaHeart } from "react-icons/fa";
 
 const TopPackages = () => {
   return (
-    <div>
+    <div className="w-full max-w-maxWidthContent mx-auto ">
       <h1 className="text-lg px-6 mt-2">Top Packages</h1>
-      <div className="w-full max-w-maxContent mx-auto flex justify-start p-4 gap-x-2 overflow-auto hide-scrollbar">
-        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
+      <div className="flex justify-start p-4 gap-x-2 overflow-auto hide-scrollbar">
+        <div className="min-w-full md:min-w-[300px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-1.jpg"
             alt=""
@@ -17,10 +17,10 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
+              {/* <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 "> */}
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
-                </div>
+                {/* </div> */}
                 
               </div>
             </div>
@@ -40,7 +40,7 @@ const TopPackages = () => {
             </div>
           </div>
         </div>
-        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
+        <div className="min-w-full md:min-w-[300px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-2.jpg"
             alt=""
@@ -51,10 +51,10 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
+              {/* <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 "> */}
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
-                </div>
+                {/* </div> */}
                 
               </div>
             </div>
@@ -74,7 +74,7 @@ const TopPackages = () => {
             </div>
           </div>
         </div>
-        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
+        <div className="min-w-full md:min-w-[300px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-3.jpg"
             alt=""
@@ -85,10 +85,10 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
+              {/* <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 "> */}
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
-                </div>
+                {/* </div> */}
                 
               </div>
             </div>
