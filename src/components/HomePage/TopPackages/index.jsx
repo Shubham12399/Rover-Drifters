@@ -6,7 +6,7 @@ const TopPackages = () => {
     <div>
       <h1 className="text-lg px-6 mt-2">Top Packages</h1>
       <div className="w-full max-w-maxContent mx-auto flex justify-start p-4 gap-x-2 overflow-auto hide-scrollbar">
-        <div className="min-w-full max-w-[430px] h-[220px] rounded-2xl overflow-hidden relative">
+        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-1.jpg"
             alt=""
@@ -40,7 +40,7 @@ const TopPackages = () => {
             </div>
           </div>
         </div>
-        <div className="min-w-full max-w-[430px] h-[220px] rounded-2xl overflow-hidden relative">
+        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-2.jpg"
             alt=""
@@ -74,7 +74,7 @@ const TopPackages = () => {
             </div>
           </div>
         </div>
-        <div className="min-w-full max-w-[430px] h-[220px] rounded-2xl overflow-hidden relative">
+        <div className="min-w-full max-w-[430px] h-[200px] rounded-2xl overflow-hidden relative">
           <img
             src="/images/banner-3.jpg"
             alt=""
