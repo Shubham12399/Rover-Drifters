@@ -34,7 +34,7 @@ const TopTourWorldWide = () => {
           </div>
         </div>
 
-        <div className="mt-2 flex gap-x-2 items-center overflow-auto hide-scrollbar px-4">
+        <div className="py-4 flex gap-x-4 md:gap-x-3 items-center overflow-auto hide-scrollbar px-4">
          <TourCard _id={"dasd"} currency={{symbol:"AED"}} tour_name={"Adu Dhabi Safari"} destination={"Dubai"} images={["/images/banner-1.jpg"]} price={{sharing_price:"390"}} key={"sd"}></TourCard>
          <TourCard _id={"dasd"} currency={{symbol:"AED"}} tour_name={"Adu Dhabi Safari"} destination={"Dubai"} images={["/images/banner-1.jpg"]} price={{sharing_price:"390"}} key={"sd"}></TourCard>
          <TourCard _id={"dasd"} currency={{symbol:"AED"}} tour_name={"Adu Dhabi Safari"} destination={"Dubai"} images={["/images/banner-1.jpg"]} price={{sharing_price:"390"}} key={"sd"}></TourCard>
