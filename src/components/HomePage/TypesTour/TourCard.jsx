@@ -15,10 +15,10 @@ const TourCard = ({
   images,
 }) => {
   return (
-    <div className="min-w-[140px] w-[140px] sm:w-[160px] md:min-w-[160px] md:w-[160px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
+    <div className="min-w-[156px] w-[156px] sm:w-[160px] md:min-w-[160px] md:w-[160px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
       <div className="absolute top-2 left-3">
-        <div className="bg-green-500 text-white text-[11px] rounded-full px-1 GTE_light flex gap-x-1 items-center">
-          <IoPricetag></IoPricetag> Adventure
+        <div className="bg-[#ff612c] text-white text-[10px] rounded-full px-1 GTE_light flex gap-x-1 items-center">
+          <IoPricetag className="text-[9px]"></IoPricetag> Adventure
         </div>
       </div>
       <div className="w-full">
@@ -26,7 +26,7 @@ const TourCard = ({
           loading="lazy"
           src={images && images[0]}
           alt="tour Img"
-          className="w-full h-[130px] sm:h-[120px] object-cover rounded-xl drop-shadow-sms"
+          className="w-full h-[130px] sm:h-[120px] object-cover rounded-2xl drop-shadow-sms"
         />
       </div>
       <div className="px-3 mt-1">
