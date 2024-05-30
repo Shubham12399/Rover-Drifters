@@ -113,3 +113,18 @@ body {
   filter: blur(10px); /* Adjust the blur effect */
   z-index: 1; /* Ensure shadow appears behind the image */
 }
+.black_overlay{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* background-color: linear-gradient(); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.black_overlay::before{
+  content: "";
+ 
+}

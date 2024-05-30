@@ -22,7 +22,7 @@ const GetDestinationTags = () => {
   const { destinationsApi, isLoading } = useFetch({
     queryKey: "allDestinations",
     url: countryApi.GET_ALL_COUNTRIES,
-    varName: "destinationsApi"
+    varName: "destinationsApi",
   });
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
@@ -56,9 +56,9 @@ const GetDestinationTags = () => {
                 // href={{ pathname: "/", query: { country: destination.name } }}
                 // scroll={false}
                 // shallow={true}
-                className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm bg-white shadow-md hover:bg-gray-100 text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${destination._id == selectedId?._id &&
-                  "border-2 border-black"
-                  }`}
+                className={`min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm bg-white shadow-md hover:bg-gray-100 text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ${
+                  destination._id == selectedId?._id && "border-2 border-black"
+                }`}
                 key={index}
               >
                 {/* <img

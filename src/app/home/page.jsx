@@ -12,15 +12,22 @@ import React from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { FiHeart } from "react-icons/fi";
-import { GoLocation } from "react-icons/go";
+import { GoArrowRight, GoLocation } from "react-icons/go";
 import { PiHeartLight } from "react-icons/pi";
+import ChooseDestination from "@/components/HomePage/ChooseDestination/ChooseDestination";
+import TopTourWorldWide from "@/components/HomePage/TopTourWorldWide";
 
 const Home = () => {
   // console.log(window?.innerWidth)
   return (
-    <div className="w-full pb-14 mt-3">
-      <div className="w-full max-w-maxWidthContent mx-auto">
-        <h1 className="text-lg font-medium px-4">Top Destinations</h1>
+    <div className="w-full  mt-3">
+      <div className="w-full max-w-maxWidthContent mx-auto  md:rounded-lg ">
+        <div className=" px-4 flex items-center justify-between">
+          
+        <h1 className="text-lg font-medium">Top Destinations</h1>
+        {/* <span className="text-sm GTE_light flex gap-x-1 items-center">View more <GoArrowRight></GoArrowRight></span> */}
+        </div>
+
         <div className="pb-6 flex gap-x-4 overflow-auto hide-scrollbar py-2 pt-3 px-4">
           <DestinationCard></DestinationCard>
           <DestinationCard></DestinationCard>
@@ -30,7 +37,7 @@ const Home = () => {
         </div>
       </div>
       <TravelsFirstChoice></TravelsFirstChoice>
-
+      <TopTourWorldWide></TopTourWorldWide>
       <div className="w-full max-w-maxWidthContent mx-auto ">
         <h1 className="text-lg font-medium mb-3 px-4">Top Attractions</h1>
         <CarouselWithNavigate>
@@ -190,18 +197,16 @@ const DestinationCard = () => {
       style={{ boxShadow: "var(--cardShadow)" }}
     >
       <div className="rounded-2xl trend_posts_shadow">
+        <img
+          src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          className="w-full h-[146px] select-none object-cover rounded-2xl relative z-50"
+          // style={{ boxShadow: "0 0 8px rgba(0,0,0,0.9)",
+          // clipPath:"inset(0 0 -8px 0)"
 
-      <img
-        src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
-        className="w-full h-[146px] select-none object-cover rounded-2xl relative z-50"
-        // style={{ boxShadow: "0 0 8px rgba(0,0,0,0.9)",
-        // clipPath:"inset(0 0 -8px 0)"
-
-        // }}
-        // style={{ boxShadow: "var(--softShadow)" }}
-       
-      />
+          // }}
+          // style={{ boxShadow: "var(--softShadow)" }}
+        />
       </div>
 
       <div className="flex pl-2 pr-1 pb-1 !items-center justify-between mt-3">
@@ -217,10 +222,10 @@ const DestinationCard = () => {
             className="w-[22px] h-[22px] p-1 bg-white flex items-center justify-center rounded-full cursor-pointer"
             // style={{ boxShadow: "0px 0 4px rgba(0,0,0,0.1)" }}
             style={{
-              boxShadow:"-2px 4px 4px rgba(255, 97, 44, 0.2)"
+              boxShadow: "-2px 4px 4px rgba(255, 97, 44, 0.2)",
             }}
           >
-            <PiHeartLight className="text-[#ff612c]" ></PiHeartLight>
+            <PiHeartLight className="text-[#ff612c]"></PiHeartLight>
           </div>
         </div>
       </div>
