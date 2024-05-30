@@ -36,8 +36,9 @@ const Home = () => {
           <DestinationCard></DestinationCard>
         </div>
       </div>
-      <TravelsFirstChoice></TravelsFirstChoice>
       <TopTourWorldWide></TopTourWorldWide>
+
+      <TravelsFirstChoice></TravelsFirstChoice>
       <div className="w-full max-w-maxWidthContent mx-auto ">
         <h1 className="text-lg font-medium mb-3 px-4">Top Attractions</h1>
         <CarouselWithNavigate>
