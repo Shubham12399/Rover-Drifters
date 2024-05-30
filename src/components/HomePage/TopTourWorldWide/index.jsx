@@ -44,7 +44,6 @@ const TopTourWorldWide = () => {
         </div>
       </div>
       </div>
-
     </div>
   );
 };

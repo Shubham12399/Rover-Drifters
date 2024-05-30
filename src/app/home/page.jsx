@@ -16,6 +16,7 @@ import { GoArrowRight, GoLocation } from "react-icons/go";
 import { PiHeartLight } from "react-icons/pi";
 import ChooseDestination from "@/components/HomePage/ChooseDestination/ChooseDestination";
 import TopTourWorldWide from "@/components/HomePage/TopTourWorldWide";
+import TopPackages from "@/components/HomePage/TopPackages";
 
 const Home = () => {
   // console.log(window?.innerWidth)
@@ -23,9 +24,8 @@ const Home = () => {
     <div className="w-full  mt-3">
       <div className="w-full max-w-maxWidthContent mx-auto  md:rounded-lg ">
         <div className=" px-4 flex items-center justify-between">
-          
-        <h1 className="text-lg font-medium">Top Destinations</h1>
-        {/* <span className="text-sm GTE_light flex gap-x-1 items-center">View more <GoArrowRight></GoArrowRight></span> */}
+          <h1 className="text-lg font-medium">Top Destinations</h1>
+          {/* <span className="text-sm GTE_light flex gap-x-1 items-center">View more <GoArrowRight></GoArrowRight></span> */}
         </div>
 
         <div className="pb-6 flex gap-x-4 overflow-auto hide-scrollbar py-2 pt-3 px-4">
@@ -37,7 +37,7 @@ const Home = () => {
         </div>
       </div>
       <TopTourWorldWide></TopTourWorldWide>
-
+      <TopPackages></TopPackages>
       <TravelsFirstChoice></TravelsFirstChoice>
       <div className="w-full max-w-maxWidthContent mx-auto ">
         <h1 className="text-lg font-medium mb-3 px-4">Top Attractions</h1>
