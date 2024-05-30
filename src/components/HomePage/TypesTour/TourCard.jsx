@@ -28,7 +28,7 @@ const TourCard = ({
         /> 
       </div>
       <div className="px-2 mt-1">
-        <span className="GTE_light text-[11px]">London • Moscow</span>
+        <span className="GTE_light text-[11px]"> Moscow</span>
       </div>
       <div className="px-2 ">
         {/* <Tooltip content={tour_name}> */}
