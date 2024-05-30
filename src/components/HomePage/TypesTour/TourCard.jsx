@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
@@ -13,7 +13,7 @@ const TourCard = ({
   images,
 }) => {
   return (
-    <div className="min-w-[150px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
+    <div className="min-w-[130px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-lgg">
       <div className="w-full">
         <img  
           loading="lazy"
@@ -22,12 +22,12 @@ const TourCard = ({
           className="w-full h-[110px] sm:h-[110px] object-cover rounded-md drop-shadow-sms"
         /> 
       </div>
-      <div className="px-4 sm:px-4 my-2 mb-3 sm:my-4 ">
-        <Tooltip content={tour_name}>
-          <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
+      <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+        {/* <Tooltip content={tour_name}> */}
+          <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
             {tour_name}
           </h3>
-        </Tooltip>
+        {/* </Tooltip> */}
         <h3 className="text-xs font-medium text-richblack-900 mt-1">
           {currency?.symbol} {price?.sharing_price}
         </h3>
