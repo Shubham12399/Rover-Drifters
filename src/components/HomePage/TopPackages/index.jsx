@@ -17,11 +17,11 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 pr-2">
+              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
                 </div>
-                <span className="text-xs GTE_light">Favourite</span>
+                
               </div>
             </div>
           </div>
@@ -34,8 +34,8 @@ const TopPackages = () => {
               </div>
               <div className="flex gap-x-1 items-center GTE_light">
                 <h1>$599</h1>
-                <p className="text-gray-400 GTE_light">/</p>
-                <p className="text-gray-400 text-xs GTE_light"> Person</p>
+                <p className="text-gray-300 GTE_light">/</p>
+                <p className="text-gray-300 text-xs GTE_light"> Person</p>
               </div>
             </div>
           </div>
@@ -51,11 +51,11 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 pr-2">
+              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
                 </div>
-                <span className="text-xs GTE_light">Favourite</span>
+                
               </div>
             </div>
           </div>
@@ -68,8 +68,8 @@ const TopPackages = () => {
               </div>
               <div className="flex gap-x-1 items-center GTE_light">
                 <h1>$599</h1>
-                <p className="text-gray-400 GTE_light">/</p>
-                <p className="text-gray-400 text-xs GTE_light"> Person</p>
+                <p className="text-gray-300 GTE_light">/</p>
+                <p className="text-gray-300 text-xs GTE_light"> Person</p>
               </div>
             </div>
           </div>
@@ -85,11 +85,11 @@ const TopPackages = () => {
           <div className="absolute w-full top-0 left-0 z-50 text-white px-4 py-3 flex gap-x-2 justify-end bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent">
           
             <div>
-              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 pr-2">
+              <div className="text-white bg-[rgba(299,299,299,0.2)] backdrop-blur-sm flex gap-x-1 items-center rounded-full px-1 py-1 ">
                 <div className="w-[30px] h-[30px] rounded-full bg-[rgba(299,299,299,0.2)] flex items-center justify-center ">
                 <FaHeart></FaHeart>
                 </div>
-                <span className="text-xs GTE_light">Favourite</span>
+                
               </div>
             </div>
           </div>
@@ -102,8 +102,8 @@ const TopPackages = () => {
               </div>
               <div className="flex gap-x-1 items-center GTE_light">
                 <h1>$599</h1>
-                <p className="text-gray-400 GTE_light">/</p>
-                <p className="text-gray-400 text-xs GTE_light"> Person</p>
+                <p className="text-gray-300 GTE_light">/</p>
+                <p className="text-gray-300 text-xs GTE_light"> Person</p>
               </div>
             </div>
           </div>
